@@ -1,4 +1,4 @@
-// importing the necessary package
+// importing the necessary packages and files
 const express=require("express");
 const multer = require("multer")
 let path = require("path");
@@ -19,8 +19,10 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage }).single('productImage');
 
-productRoutes.post("/add-product",upload,addProduct);
+// using productRoutes variable to create routes
+productRoutes.post("/add-product/:id?",upload,addProduct);
 productRoutes.get("/view-product",viewProduct);
-productRoutes.get("/delete-product",deleteProduct)
+productRoutes.post("/delete-product/:id",deleteProduct)
+
 // exporting productRoutes variable
 module.exports=productRoutes;

@@ -1,7 +1,9 @@
+// importing the necessary packages and files
 const { ObjectId } = require("mongodb")
 const fs = require('fs').promises
 const productModel = require("../../model/productModel")
 
+// product functions start
 exports.addProduct = async (request, response) => {
     const productName = request.body.productName
     const categoryName = request.body.categoryName
@@ -10,7 +12,7 @@ exports.addProduct = async (request, response) => {
     const productPrice = request.body.productPrice
     const productDescription = request.body.productDescription
     const productColor = request.body.productColor
-    const productImage = ""
+    let productImage
     const status = request.body.status
     const URLId = request.params.id ?? ""
     if (request.file === undefined) {
@@ -19,7 +21,7 @@ exports.addProduct = async (request, response) => {
                 const productData = await productModel.findOne({ _id: new ObjectId(URLId) })
                 productImage = productData.productImage
             }
-            catch (e) {
+            catch (error) {
 
             }
         }
@@ -41,7 +43,7 @@ exports.addProduct = async (request, response) => {
         productImage,
         status,
     }
-    const resObj={}
+    let resObj
     if (URLId === "") {
         const finalRes = await productModel(obj)
         try {
@@ -62,7 +64,7 @@ exports.addProduct = async (request, response) => {
     }
     else {
         try {
-            await productModel.findOneAndUpdate({ _id: new ObjectId(URLId) }, { $set: obj })
+            await productModel.updateOne({ _id: new ObjectId(URLId) }, { $set: obj })
             resObj={
                 status: 1,
                 message: "! data updated successfully !"
@@ -80,7 +82,7 @@ exports.addProduct = async (request, response) => {
 }
 
 exports.viewProduct = async (request, response) => {
-    const resObj={}
+    let resObj
     try {
         const allData = await productModel.find().populate("categoryId")
         const productImageLink = "http://localhost:1323/Uploads/Products"
@@ -103,11 +105,11 @@ exports.viewProduct = async (request, response) => {
 
 exports.deleteProduct = async (request, response) => {
     const deleteId = request.params.id
-    const resObj={}
+    let resObj
     try {
-        const productData = await productModel.findOneAndDelete({ _id: new ObjectId(deleteId) });
+        const productData = await productModel.deleteOne({ _id: new ObjectId(deleteId) });
         if (productData.productImage) {
-            const imagePath = `uploads/product/${productData.productImage}`
+            const imagePath = `Uploads/Products/${productData.productImage}`
             await fs.unlink(imagePath);
         }
         resObj={
@@ -118,9 +120,31 @@ exports.deleteProduct = async (request, response) => {
     catch (error) {
         resObj={
             status: 0,
-            message: "! id not found !",
+            message: "! data deletion unsuccessfull !",
             data: error
         }
     }
     response.send(resObj)
 }
+
+exports.editProduct=async(request,response)=>{
+    const URLId = request.params.id
+    let resObj
+    try {
+        const productData = await productModel.findOne({ _id: new ObjectId(URLId) })
+        resObj={
+            status: 1,
+            message: "! data found !",
+            data: productData
+        }
+    }
+    catch (error) {
+        resObj={
+            status: 0,
+            message: "! data not found !",
+            data: error
+        }
+    }
+    response.send(resObj)
+}
+// product functions end
