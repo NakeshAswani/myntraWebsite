@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.categories_inner1:hover{
+    border-bottom: 3px solid #f46172;
+}
+
+.categories_inner2:hover{
+    border-bottom: 3px solid #ff59bd;
+}
+
+.categories_inner3:hover{
+    border-bottom: 3px solid #f86c20;
+}
+
+.categories_inner4:hover{
+    border-bottom: 3px solid #f3c338;
+}
+
+
+.categories_inner5:hover{
+    border-bottom: 3px solid #00b6af;
+}
+
+
+
+
+.topwear_indian>ul>li:hover{
+    font-weight: 600;
+}
+
+
+.bottom_wear_section>ul>li:hover{
+    font-weight: 500;
+}
+
+.mens_dropdown{
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    left: -1000%;
+}
+
+.categories_inner1:hover .mens_dropdown{
+    opacity: 1;
+    visibility: visible;
+    left: 0 ;
+}
