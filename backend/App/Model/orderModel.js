@@ -2,8 +2,8 @@
 const { default: mongoose } = require("mongoose");
 const { Schema, model } = mongoose;
 
-// creating productSchema
-const productSchema = new Schema({
+// creating orderSchema
+const orderSchema = new Schema({
     productName: {
         type: String,
         required: true
@@ -16,16 +16,7 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    categoryId: {
-        type: Schema.Types.ObjectId,
-        ref: "categoryTable",
-        required: true
-    },
     productPrice: {
-        type: String,
-        required: true
-    },
-    productDescription: {
         type: String,
         required: true
     },
@@ -33,16 +24,21 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    productImage: {
+    quantity: {
+        type: Number,
+        required: true
+    },
+    totalAmount: {
         type: String,
         required: true
     },
-    status: {
-        type: Number,
+    userId: {
+        type: Schema.Types.ObjectId,
+        ref: "users",
         required: true
     },
 }, { timestamps: true })
 
-// creating and exporting productModel
-const productModel = model("productTable", productSchema)
-module.exports = productModel
+// creating and exporting orderModel
+const orderModel = model("orderTable", orderSchema)
+module.exports = orderModel

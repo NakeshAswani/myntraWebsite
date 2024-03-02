@@ -2,17 +2,17 @@
 const { default: mongoose } = require("mongoose");
 const { Schema, model } = mongoose;
 
-// creating categorySchema
-const categorySchema = new Schema({
-    categoryName: {
+// creating sliderSchema
+const sliderSchema = new Schema({
+    sliderName: {
         type: String,
         required: true
     },
-    categoryDescription: {
+    sliderDescription: {
         type: String,
         required: true
     },
-    categoryImage: {
+    sliderImage: {
         type: String,
         required: true
     },
@@ -22,6 +22,6 @@ const categorySchema = new Schema({
     },
 }, { timestamps: true })
 
-// creating and exporting categoryModel
-const categoryModel = model("categoryTable", categorySchema)
-module.exports = categoryModel
+// creating and exporting sliderModel
+let sliderModel = model("sliderTable", sliderSchema)
+module.exports = sliderModel

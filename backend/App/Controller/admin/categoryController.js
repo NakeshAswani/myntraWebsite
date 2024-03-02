@@ -1,7 +1,7 @@
 // importing the necessary packages and files
 const { ObjectId } = require("mongodb")
 const fs = require('fs').promises
-const categoryModel = require("../../model/categoryModel")
+const categoryModel = require("../../Model/categoryModel")
 const subCategoryModel = require("../../Model/subcategoryModel")
 
 // category functions start
@@ -98,7 +98,7 @@ exports.deleteCategory = async (request, response) => {
     const deleteId = request.params.id
     let resObj
     try {
-        const categoryData = await categoryModel.deleteOne({ _id: new ObjectId(deleteId) });
+        const categoryData = await categoryModel.findOneAndDelete({ _id: new ObjectId(deleteId) });
         if (categoryData.categoryImage) {
             const imagePath = `Uploads/Category/${categoryData.categoryImage}`
             await fs.unlink(imagePath);
@@ -238,7 +238,7 @@ exports.deleteSubCategory = async (request, response) => {
     const deleteId = request.params.id
     let resObj
     try {
-        const subCategoryData = await subCategoryModel.deleteOne({ _id: new ObjectId(deleteId) });
+        const subCategoryData = await subCategoryModel.findOneAndDelete({ _id: new ObjectId(deleteId) });
         if (subCategoryData.subCategoryImage) {
             const imagePath = `Uploads/SubCategory/${subCategoryData.subCategoryImage}`
             await fs.unlink(imagePath);

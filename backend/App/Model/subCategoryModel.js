@@ -1,6 +1,8 @@
+// importing the necessary package
 const { default: mongoose } = require("mongoose");
 const { Schema, model } = mongoose;
 
+// creating subCategorySchema
 const subCategorySchema = new Schema({
     subCategoryName: {
         type: String,
@@ -29,6 +31,6 @@ const subCategorySchema = new Schema({
     },
 }, { timestamps: true })
 
-let subCategoryModel = model("subCategoryTable", subCategorySchema)
-
+// creating and exporting subCategoryModel
+const subCategoryModel = model("subCategoryTable", subCategorySchema)
 module.exports = subCategoryModel

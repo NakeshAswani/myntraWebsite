@@ -1,9 +1,9 @@
 // importing the necessary package
-const mongoose = require('mongoose');
+const { default: mongoose } = require("mongoose");
 const { Schema, model } = mongoose;
 
-// creating registrationSchema
-const registrationSchema = Schema({
+// creating userRegistrationSchema
+const userRegistrationSchema = new Schema({
     Full_Name: {
         type: String,
         required: true,
@@ -31,6 +31,6 @@ const registrationSchema = Schema({
     },
 }, { timestamps: true })
 
-// creating and exporting registrationModel
-const registrationModel = model("users", registrationSchema)
-module.exports = registrationModel
+// creating and exporting userRegistrationModel
+const userRegistrationModel = model("users", userRegistrationSchema)
+module.exports = userRegistrationModel

@@ -2,6 +2,7 @@
 const express=require("express");
 const categoryRoutes = require("./Routes/admin/categoryRoutes");
 const colorRoutes = require("./Routes/admin/colorRoutes");
+const orderRoutes = require("./Routes/admin/orderRoutes");
 const productRoutes = require("./Routes/admin/productRoutes");
 const sliderRoutes = require("./Routes/admin/sliderRoutes");
 const userRoutes = require("./Routes/admin/userRoutes");
@@ -17,6 +18,7 @@ router.get("/",(request,response)=>{
 // admin routes
 router.use("/category",categoryRoutes);
 router.use("/color",colorRoutes);
+router.use("/order",orderRoutes);
 router.use("/product",productRoutes);
 router.use("/slider",sliderRoutes);
 router.use("/user",userRoutes);
