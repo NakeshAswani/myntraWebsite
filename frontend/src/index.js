@@ -103,7 +103,10 @@ let routes = createBrowserRouter([
   },
 
   // web routes
-
+  {
+    path:"/",
+    element:<Home/>,
+  },
 ])
 root.render(
   <React.StrictMode>
