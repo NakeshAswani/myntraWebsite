@@ -26,25 +26,115 @@
 
 
 
+/* mens dropdown */
 
-.topwear_indian>ul>li:hover{
-    font-weight: 600;
-}
-
-
-.bottom_wear_section>ul>li:hover{
-    font-weight: 500;
-}
-
-.mens_dropdown{
+ .mens_dropdown{
     opacity: 0;
     visibility: hidden;
     transition: 1s;
     left: -1000%;
-}
+} 
+
 
 .categories_inner1:hover .mens_dropdown{
     opacity: 1;
     visibility: visible;
     left: 0 ;
+}
+
+
+
+/* mens dropdown sections */
+
+.top_wear_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.india_festive_list>ul>li:hover{
+    font-weight: 700;
+}
+
+
+.bottom_wear_list>ul>li:hover{
+    font-weight: 700;
+}
+
+
+.innerwear_sleepwear_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.plus_size_list>ul>li:hover{
+    font-weight: 700;
+}
+
+
+
+
+/* womens dropdown  */
+
+
+.womens_dropdown{
+    top: -700%;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.categories_inner2:hover .womens_dropdown{
+    top: 105% !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+.indian_fusion_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.rain_jackets>ul>li:hover{
+    font-weight: 700;
+}
+
+
+.Watches_Wearables>ul>li:hover{
+    font-weight: 700;
+}
+
+
+.Western_wear_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.women_plus_size_list>ul>li{
+    font-weight: 700;
+}
+
+
+
+
+/* kids dropdown  */
+
+
+.kids_dropdown{
+    top: -700%;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.categories_inner3:hover .kids_dropdown{
+    top: 105% !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.boys_clothing_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.girls_clothing_list>ul>li:hover{
+    font-weight: 700;
 }
