@@ -22,6 +22,7 @@ import { AddSlider } from './pages/admin/AddSlider';
 import { ViewSlider } from './pages/admin/ViewSlider';
 // web routes
 import { Home } from './pages/web/Home';
+import MainContext from './Contextdata/AdminContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -34,7 +35,7 @@ let routes = createBrowserRouter([
 
   {
     path: "/profile",
-    element: <Profile/>,
+    element: <Profile />,
   },
 
   {
@@ -44,9 +45,9 @@ let routes = createBrowserRouter([
 
   {
     path: "/admin/slider/add-slider",
-    element: <AddSlider/>,
+    element: <AddSlider />,
   },
-  
+
   {
     path: "/admin/slider/view-slider",
     element: <ViewSlider />,
@@ -98,20 +99,20 @@ let routes = createBrowserRouter([
   },
 
   {
-    path:"/admin/orders",
-    element:<Orders/>,
+    path: "/admin/orders",
+    element: <Orders />,
   },
 
   // web routes
   {
-    path:"/",
-    element:<Home/>,
+    path: "/",
+    element: <Home />,
   },
 ])
 root.render(
-  <React.StrictMode>
+  <MainContext>
     <RouterProvider router={routes} />
-  </React.StrictMode>
+  </MainContext>
 );
 
 // If you want to start measuring performance in your app, pass a function

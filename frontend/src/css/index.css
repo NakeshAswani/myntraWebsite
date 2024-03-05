@@ -138,3 +138,21 @@
 .girls_clothing_list>ul>li:hover{
     font-weight: 700;
 }
+
+
+
+
+
+
+
+
+/* Admin login page */
+.background_admin{
+    background-image: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
+}
+.circle{
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
+}
+/* Admin login page */
