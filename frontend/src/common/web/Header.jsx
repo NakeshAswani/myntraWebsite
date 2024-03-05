@@ -264,59 +264,77 @@ export function Header() {
             <div className='home_living_dropdown absolute w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex '>
               {/* kids dropdown section 1*/}
               <div className='home_living_dropdown1 w-[170px]'>
-                {/* boys clothing list*/}
-                <div className='boys_clothing_list '>
+                {/*bed linen list*/}
+                <div className='bed_linen_list '>
                   <ul className='font-[100] leading-[27px]'>
                     {/* category */}
-                    <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Boys Clothing</li>
-                    {/* topwear subcategory */}
-                    <li className='text-[14px] font-[400]'>T-Shirts</li>
-                    <li className='text-[14px] font-[400]'>Shirts</li>
-                    <li className='text-[14px] font-[400]'>Shorts</li>
-                    <li className='text-[14px] font-[400]'>Jeans</li>
-                    <li className='text-[14px] font-[400]'>Trousers</li>
-                    <li className='text-[14px] font-[400]'>Clothing Sets</li>
-                    <li className='text-[14px] font-[400]'>Ethnic Wear</li>
-                    <li className='text-[14px] font-[400]'>Track Pants &amp; Pyjamas</li>
-                    <li className='text-[14px] font-[400]'>Jacket, Sweater &amp; Sweatshirts</li>
-                    <li className='text-[14px] font-[400]'>Party Wear</li>
-                    <li className='text-[14px] font-[400]'>Innerwear &amp; Thermals</li>
-                    <li className='text-[14px] font-[400]'>Nightwear &amp; Loungewear</li>
-                    <li className='text-[14px] font-[400]'>Value Packs</li>
-
+                    <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Bed Linen &amp; Furnishing</li>
+                    {/* bed lilen subcategory */}
+                    <li className='text-[14px] font-[400]'>Bed Runners</li>
+                    <li className='text-[14px] font-[400]'>Mattress Protectors</li>
+                    <li className='text-[14px] font-[400]'>Bedsheets</li>
+                    <li className='text-[14px] font-[400]'>Bedding Sets</li>
+                    <li className='text-[14px] font-[400]'>Blankets, Quilts &amp; Dohars</li>
+                    <li className='text-[14px] font-[400]'>Pillows &amp; Pillow Covers</li>
+                    <li className='text-[14px] font-[400]'>Bed Covers</li>
+                    <li className='text-[14px] font-[400]'>Diwan Sets</li>
+                    <li className='text-[14px] font-[400]'>Chair Pads &amp; Covers</li>
+                    <li className='text-[14px] font-[400]'>Sofa Covers</li>
+                    <li className='text-[14px] font-[400] border-b-[1px] border-[#eaeaec] pb-[7px]'></li>
                   </ul>
                 </div>
 
+                {/*flooring list*/}
+                <div className='flooring_list'>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Flooring</li>
+                    {/* subcategory */}
+                    <li className='text-[14px] font-[400]'>Floor Runners</li>
+                    <li className='text-[14px] font-[400]'>Carpets</li>
+                    <li className='text-[14px] font-[400]'>Floor Mats &amp; Dhurries</li>
+                    <li className='text-[14px] font-[400]'>Door Mats</li>
+                  </ul>
+                </div>
+
+
               </div>
+
+
 
 
 
               {/* section 2  */}
               <div className='home_living_dropdown2 ml-[50px] w-[170px]'>
                 {/* girls_clothing*/}
-                <div className='girls_clothing_list'>
+                <div className='bath_list'>
                   <ul className='font-[100] leading-[27px]'>
                     {/* category */}
-                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'>Girls Clothing</li>
+                    <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Bath</li>
                     {/*  subcategory */}
-                    <li className='text-[14px] font-[400]'>Dresses</li>
-                    <li className='text-[14px] font-[400]'>Tops</li>
-                    <li className='text-[14px] font-[400]'>Tshirts</li>
-                    <li className='text-[14px] font-[400]'>Clothing Sets</li>
-                    <li className='text-[14px] font-[400]'>Lehenga choli</li>
-                    <li className='text-[14px] font-[400]'>Kurta Sets</li>
-                    <li className='text-[14px] font-[400]'>Party wear</li>
-                    <li className='text-[14px] font-[400]'>Dungarees &amp; Jumpsuits</li>
-                    <li className='text-[14px] font-[400]'>Skirts &amp; shorts</li>
-                    <li className='text-[14px] font-[400]'>Tights &amp; Leggings</li>
-                    <li className='text-[14px] font-[400]'>Jeans, Trousers &amp; Capris</li>
-                    <li className='text-[14px] font-[400]'>Jacket, Sweater &amp; Sweatshirts</li>
-                    <li className='text-[14px] font-[400]'>Innerwear &amp; Thermals</li>
-                    <li className='text-[14px] font-[400]'>Nightwear &amp; Loungewear</li>
-                    <li className='text-[14px] font-[400]'>Value Packs</li>
+                    <li className='text-[14px] font-[400]'>Bath Towels</li>
+                    <li className='text-[14px] font-[400]'>Hand &amp; Face Towels</li>
+                    <li className='text-[14px] font-[400]'>Beach Towels</li>
+                    <li className='text-[14px] font-[400]'>Towels Set</li>
+                    <li className='text-[14px] font-[400]'>Bath Rugs</li>
+                    <li className='text-[14px] font-[400]'>Bath Robes</li>
+                    <li className='text-[14px] font-[400]'>Bathroom Accessories</li>
+                    <li className='text-[14px] font-[400]'>Shower Curtains</li>
+                    <li className='text-[14px] font-[400]'>Lamps &amp; Lighting</li>
+                    <li className='text-[14px] font-[400] border-b-[1px] border-[#eaeaec] pb-[7px]'></li>
+
                   </ul>
                 </div>
-
+                <div className='floor_lamps'>
+                  <ul>
+                    <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Floor Lamps</li>
+                    <li className='text-[14px] font-[400]'>Ceiling Lamps</li>
+                    <li className='text-[14px] font-[400]'>Table Lamps</li>
+                    <li className='text-[14px] font-[400]'>Wall Lamps</li>
+                    <li className='text-[14px] font-[400]'>Outdoor Lamps</li>
+                    <li className='text-[14px] font-[400]'>String Lights</li>
+                  </ul>
+                </div>
 
               </div>
             </div>
@@ -332,4 +350,8 @@ export function Header() {
     </>
   )
 }
+
+
+
+
 
