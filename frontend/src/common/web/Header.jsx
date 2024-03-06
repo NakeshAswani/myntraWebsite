@@ -1,10 +1,13 @@
 import React from 'react'
 import logo from "../../images/Myntra-icon-logo.svg"
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBagShopping, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 export function Header() {
   return (
     <>
-      <header className='w-[100%] border border-1 border-[blue] flex justify-between items-center  bg-[white] '>
+      <header className='w-[100%] flex justify-between items-center  bg-[white] '>
         <div className='logo_section p-[20.77px]'>
           <img src={logo} alt="" className='w-[53px]' />
         </div>
@@ -14,9 +17,9 @@ export function Header() {
           {/* <------------------------------------------------------------------------------------------------------------------------------------> */}
 
           {/* mens */}
-          <Link className=' categories_inner1 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative'>MEN
+          <Link className=' categories_inner1 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[999]'>MEN
             {/* mens dropdown */}
-            <div className='mens_dropdown absolute w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex '>
+            <div className='mens_dropdown absolute w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex z-[-99] '>
               {/*dropdown section 1*/}
               <div className='dropdown_section1 w-[170px]'>
                 {/*topwear list*/}
@@ -99,9 +102,9 @@ export function Header() {
           {/* <-------------------------------------------------------------------------------------------------------------------------------------> */}
 
           {/* womens */}
-          < Link className=' categories_inner2 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative' > WOMEN
+          < Link className=' categories_inner2 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[999]' > WOMEN
             {/* womens_dropdown */}
-            <div div className='womens_dropdown absolute w-[auto] bg-[white] top-[105%] left-0  p-[20px] flex' >
+            <div div className='womens_dropdown absolute w-[auto] bg-[white] top-[105%] left-0  p-[20px] z-[-99] flex' >
               {/* womens_dropdown_1 */}
               <div className='womens_dropdown_1 w-[170px]'>
 
@@ -194,7 +197,7 @@ export function Header() {
 
 
           {/*kids*/}
-          <Link className=' categories_inner3 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[99]'>KIDS
+          <Link className=' categories_inner3 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[999]'>KIDS
             {/* kids dropdown */}
             <div className='kids_dropdown absolute z-[-999] w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex '>
               {/* kids dropdown section 1*/}
@@ -260,8 +263,8 @@ export function Header() {
 
           {/* <-------------------------------------------------------------------------------------------------------------------------------------->*/}
           {/* HOME & LIVING */}
-          <Link className=' categories_inner4 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[99]'>HOME & LIVING
-            <div className='home_living_dropdown absolute w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex '>
+          <Link className=' categories_inner4 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] relative z-[999]'>HOME & LIVING
+            <div className='home_living_dropdown absolute w-[auto] top-[105%] bg-[white] left-0  p-[20px] flex z-[-999] '>
               {/* kids dropdown section 1*/}
               <div className='home_living_dropdown1 w-[170px]'>
                 {/*bed linen list*/}
@@ -326,7 +329,7 @@ export function Header() {
                   </ul>
                 </div>
                 <div className='floor_lamps'>
-                  <ul>
+                  <ul className='font-[100] leading-[27px]'>
                     <li className='font-[700] text-[14px] text-color6 mb-[5px]'>Floor Lamps</li>
                     <li className='text-[14px] font-[400]'>Ceiling Lamps</li>
                     <li className='text-[14px] font-[400]'>Table Lamps</li>
@@ -342,16 +345,141 @@ export function Header() {
 
 
           {/* <-------------------------------------------------------------------------------------------------------------------------------------->*/}
-          <Link className=' categories_inner5 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550]'>BEAUTY</Link>
+          <Link className=' categories_inner5 h-[100%] mr-[25px] flex items-center px-[5px] text-[15px] font-[550] z-[9999] relative'>BEAUTY
+            <div className=' beauty_dropdown absolute w-[auto] top-[105%] bg-[white] left-0 abc  p-[20px] flex z-[-999]'>
+              {/* makeup clothing list*/}
+              <div className='w-[170px] beauty_dropdown1'>
+                <div className='makeup_list '>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'>Makeup</li>
+                    {/* makeup subcategory */}
+                    <li className='text-[14px] font-[400]'>Lipstick</li>
+                    <li className='text-[14px] font-[400]'>Lip Gloss</li>
+                    <li className='text-[14px] font-[400]'>Lip Liner</li>
+                    <li className='text-[14px] font-[400]'>Mascara</li>
+                    <li className='text-[14px] font-[400]'>Eyeliner</li>
+                    <li className='text-[14px] font-[400]'>Kajal</li>
+                    <li className='text-[14px] font-[400]'>Eyeshadow</li>
+                    <li className='text-[14px] font-[400]'>Foundation</li>
+                    <li className='text-[14px] font-[400]'>Primer</li>
+                    <li className='text-[14px] font-[400]'>Concealer</li>
+                    <li className='text-[14px] font-[400]'>Compact</li>
+                    <li className='text-[14px] font-[400]'>Nail Polish</li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+              <div className='w-[170px] beauty_dropdown2'>
+                <div className='makeup_list '>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'></li>
+                    {/* makeup subcategory */}
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                    <li className='text-[14px] font-[400]'></li>
+                  </ul>
+                </div>
+
+                <div className='skincare_list'>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'>Skincare, Bath &amp; Body</li>
+                    {/* makeup subcategory */}
+                    <li className='text-[14px] font-[400]'>Face Moisturiser</li>
+                    <li className='text-[14px] font-[400]'>Cleanser</li>
+                    <li className='text-[14px] font-[400]'>Masks &amp; Peel</li>
+                    <li className='text-[14px] font-[400]'>Sunscreen</li>
+                    <li className='text-[14px] font-[400]'>Serum</li>
+                    <li className='text-[14px] font-[400]'>Face Wash</li>
+                    <li className='text-[14px] font-[400]'>Eye Cream</li>
+                    <li className='text-[14px] font-[400]'>Lip Balm</li>
+                    <li className='text-[14px] font-[400]'>Body Lotion</li>
+                    <li className='text-[14px] font-[400]'>Body Wash</li>
+                    <li className='text-[14px] font-[400]'>Body Scrub</li>
+                    <li className='text-[14px] font-[400]'>Hand Cream</li>
+                    <li className='text-[14px] font-[400] border-b-[1px] border-[#eaeaec] pb-[7px]'></li>
+                  </ul>
+                </div>
+
+                <div className='baby_care_list'>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'>Baby Care</li>
+                    {/* baby subcategory */}
+                    <li className='text-[14px] font-[400] border-b-[1px] border-[#eaeaec] pb-[7px]'></li>
+                  </ul>
+                </div>
+
+
+                <div className='baby_care_list'>
+                  <ul className='font-[100] leading-[27px]'>
+                    {/* category */}
+                    <li className='font-[700] text-[14px] text-color5 mb-[5px]'>Masks</li>
+                    {/* masks subcategory */}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div >
 
-        yghtfhth
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/* search section */}
+
+
+        <div className='search w-[300px] flex items-center p-[5px] pl-[8px] mr-[10px] rounded-[5px] outline outline-[0.5px] outline-[#8080804d] border border-1 border-[blue]'>
+          <div className='search_icon'>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
+          <div className='search_input w-[90%]'>
+            <input type="text" className=' w-[100%] h-[30px] outline-none ml-[10px] text-[15px]' placeholder="Search For Products, brands and more" />
+          </div>
+        </div>
+
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*  profile_and_cart_section */}
+
+        <div className='profile_and_cart_section flex justify-between items-center w-[90px] mr-[30px] border border-1 border-[green]'>
+
+          <div className='search_icon_section text-center'>
+            <div className='search_icon2 text-[20px]'>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </div>
+            <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Search</div>
+          </div>
+
+          <div className='profile_section text-center'>
+            <div className='profile_icon text-[20px]'>
+              <FontAwesomeIcon icon={faUser} />
+            </div>
+            <div className='profile_heading text-[14px] mt-[-7px] font-[600]'>Profile</div>
+          </div>
+
+          <div className='cart_section'>
+            <div className='cart_icon text-[20px]'>
+              <FontAwesomeIcon icon={faCartPlus} />
+            </div>
+            <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Cart</div>
+          </div>
+        </div>
       </header >
     </>
   )
 }
-
-
-
-
-
