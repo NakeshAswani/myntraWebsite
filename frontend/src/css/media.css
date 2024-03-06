@@ -6,3 +6,24 @@
     }
 
 }
+
+
+@media screen and (max-width:1140px) {
+    .categories_name{
+        margin-left: -20px;
+    }
+}
+
+
+@media screen and (max-width:1010px) {
+    .profile_and_cart_section{
+        width: 150px;
+    }
+    .search{
+        display: none;
+    }
+
+    .search_icon_section{
+        display: block;
+    }
+}

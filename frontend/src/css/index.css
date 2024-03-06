@@ -32,14 +32,14 @@
     opacity: 0;
     visibility: hidden;
     transition: 1s;
-    left: -1000%;
+    top: -1000%;
 } 
 
 
 .categories_inner1:hover .mens_dropdown{
     opacity: 1;
     visibility: visible;
-    left: 0 ;
+    top: 105%;
 }
 
 
@@ -141,9 +141,69 @@
 
 
 
+/* home living dropdown*/
+
+.home_living_dropdown{
+    top: -700%;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
 
 
+.categories_inner4:hover .home_living_dropdown{
+    top: 105% !important;
+    opacity: 1;
+    visibility: visible;
+}
 
+
+.bed_linen_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.flooring_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.bath_list>ul>li:hover{
+    font-weight: 700;
+}
+
+.floor_lamps>ul>li:hover{
+    font-weight: 700;
+}
+
+
+/* beauty dropdown*/
+
+.beauty_dropdown{
+    top: -700%;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.categories_inner5:hover .beauty_dropdown{
+    top: 105% !important;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* search icon media responsive*/
+
+.search_icon_section{
+    display: none;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
 
 
 /* Admin login page */
