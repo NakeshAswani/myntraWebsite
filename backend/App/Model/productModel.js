@@ -16,9 +16,9 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    categoryId: {
+    subCategoryId: {
         type: Schema.Types.ObjectId,
-        ref: "categoryTable",
+        ref: "subCategoryTable",
         required: true
     },
     productPrice: {

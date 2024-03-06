@@ -1,14 +1,14 @@
 // importing the necessary packages and files
 const { ObjectId } = require("mongodb")
 const fs = require('fs').promises
-const productModel = require("../../model/productModel")
+const productModel = require("../../Model/productModel")
 
 // product functions start
 exports.addProduct = async (request, response) => {
     const productName = request.body.productName
     const categoryName = request.body.categoryName
     const subCategoryName = request.body.subCategoryName
-    const categoryId = request.body.categoryId
+    const subCategoryId = request.body.subCategoryId
     const productPrice = request.body.productPrice
     const productDescription = request.body.productDescription
     const productColor = request.body.productColor
@@ -36,7 +36,7 @@ exports.addProduct = async (request, response) => {
         productName,
         categoryName,
         subCategoryName,
-        categoryId,
+        subCategoryId,
         productPrice,
         productDescription,
         productColor,
@@ -84,7 +84,7 @@ exports.addProduct = async (request, response) => {
 exports.viewProduct = async (request, response) => {
     let resObj
     try {
-        const allData = await productModel.find().populate("categoryId")
+        const allData = await productModel.find().populate("subCategoryId")
         const productImageLink = "http://localhost:1323/Uploads/Products"
         resObj={
             status: 1,

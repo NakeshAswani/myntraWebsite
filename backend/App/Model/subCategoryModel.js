@@ -6,7 +6,8 @@ const { Schema, model } = mongoose;
 const subCategorySchema = new Schema({
     subCategoryName: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     categoryName: {
         type: String,

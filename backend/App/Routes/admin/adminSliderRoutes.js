@@ -2,10 +2,10 @@
 const express=require("express");
 const multer = require("multer")
 let path = require("path");
-const { addSlider, viewSlider, deleteSlider } = require("../../Controller/admin/sliderController");
+const { addSlider, viewSlider, deleteSlider } = require("../../Controller/admin/adminSliderController");
 
-// creating a sliderRoutes variable
-const sliderRoutes=express.Router();
+// creating a adminSliderRoutes variable
+const adminSliderRoutes=express.Router();
 
 // multer image storage code
 const storage = multer.diskStorage({
@@ -19,10 +19,10 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage }).single('sliderImage')
 
-// using sliderRoutes variable to create routes
-sliderRoutes.post("/add-slider/:id?",upload,addSlider)
-sliderRoutes.get("/view-slider",viewSlider)
-sliderRoutes.post("/delete-slider/:id",deleteSlider)
+// using adminSliderRoutes variable to create routes
+adminSliderRoutes.post("/add-slider/:id?",upload,addSlider)
+adminSliderRoutes.get("/view-slider",viewSlider)
+adminSliderRoutes.post("/delete-slider/:id",deleteSlider)
 
-// exporting sliderRoutes variable
-module.exports=sliderRoutes
+// exporting adminSliderRoutes variable
+module.exports=adminSliderRoutes

@@ -11,11 +11,13 @@ const userRegistrationSchema = new Schema({
     },
     Email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     Phone: {
         type: Number,
-        required: true
+        required: true,
+        unique: true
     },
     Address: {
         type: String,

@@ -2,7 +2,7 @@
 const { ObjectId } = require("mongodb")
 const fs = require('fs').promises
 const categoryModel = require("../../Model/categoryModel")
-const subCategoryModel = require("../../Model/subcategoryModel")
+const subCategoryModel = require("../../Model/subCategoryModel")
 
 // category functions start
 exports.addCategory = async (request, response) => {
