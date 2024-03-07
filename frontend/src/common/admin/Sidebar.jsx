@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import { adminContext } from '../../Contextdata/AdminContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { faQ, faUser } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import {sidbarAccordion } from './F&Q'
 
 export default function Sidebar() {
-  let { sidBar, setSitBar } = useContext(adminContext)
+  let { sidBar, setSitBar } = useContext(adminContext);
+  let datafaq = sidbarAccordion
   return (
     <>
       <div className={(sidBar) ? 'w-[218px] shadow-md' : 'w-[137px] shadow-md'}>
@@ -19,10 +21,11 @@ export default function Sidebar() {
               </Link>
             </li>
             <li className='mt-[10px]'>
-              <Link to={'/admin/dashboard'} className=' text-[25px]  m-[0] font-semibold'>
-                <FontAwesomeIcon icon={faUser} className=' ps-5 pe-[8px] text-[20px]e' />
-                Catagery
-              </Link>
+                <FontAwesomeIcon icon={faUser} className=' ps-5 pe-[8px] text-[20px]' />
+                <span className=' text-[25px]  m-[0] font-semibold'>Catagery</span>
+                <ul>
+                  
+                </ul>
             </li>
             <li className='mt-[10px]'>
               <FontAwesomeIcon icon={faUser} className=' ps-5 text-[20px]' />
@@ -42,6 +45,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
+        
       </div>
     </>
   )
