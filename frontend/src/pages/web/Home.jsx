@@ -46,14 +46,8 @@ export function Home() {
             <img src={flat200} alt="" className='w-[50%]' />
           </div>
         </sectiom>
-
-        <section className='products w-[100%]' >
-
-          <Slider {...settings}>
-           
-          </Slider>
-
-        </section>
+        
+        
       </main>
     </>
   )
