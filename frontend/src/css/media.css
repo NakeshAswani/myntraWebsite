@@ -26,4 +26,156 @@
     .search_icon_section{
         display: block;
     }
+
+    .categories_name{
+        display: none;
+    }
+
+    .menubar{
+        display: block;
+    }
 }
+
+
+@media screen and (max-width:330px) {
+    .profile_and_cart_section{
+        width: 150px;
+        margin-right: 10px;
+    }
+    .search{
+        display: none;
+    }
+
+    .search_icon_section{
+        display: block;
+    }
+
+    .categories_name{
+        display: none;
+    }
+
+    .menubar{
+        display: block;
+    }
+}
+
+
+
+@media screen and (max-width:295px) {
+
+    .logo_section>img{
+        width: 45px;
+    }
+
+    .menubar{
+        font-size: 20px;
+        left: 80px;
+    }
+
+    .profile_and_cart_section{
+        margin-right: 10px;
+    }
+    .search{
+        display: none;
+    }
+
+    .profile_and_cart_section{
+        width: 130px;
+    }
+    .search_icon2{
+        font-size: 15px;
+    }
+
+    .profile_icon{
+        font-size: 15px;
+    }
+
+    .cart_icon{
+        font-size: 15px;
+    }
+
+    .categories_name{
+        display: none;
+    }
+
+    
+}
+
+
+@media screen and (max-width:249px) {
+
+    .logo_section>img{
+        width: 70px;
+    }
+
+
+    .profile_and_cart_section{
+        margin-right: 10px;
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+
+    .menubar{
+        font-size: 24px;
+        left: 85%;
+        margin-right: 15px;
+    }
+
+}
+
+
+
+@media screen and (max-width:153px) {
+
+    .logo_section>img{
+        width: 70px;
+    }
+
+
+    .profile_and_cart_section{
+        margin-right: 10px;
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+
+    .menubar{
+        font-size: 24px;
+        left: 80%;
+        margin-right: 25px;
+    }
+
+}
+
+
+@media screen and (max-width:141px) {
+
+    header{
+        justify-content: space-evenly;
+    }
+
+    .logo_section>img{
+        width: 50px;
+    }
+
+
+    .profile_and_cart_section{
+        margin-right: 10px;
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+
+    .menubar{
+        font-size: 24px;
+        left: 70%;
+    }
+
+}
+
+
+

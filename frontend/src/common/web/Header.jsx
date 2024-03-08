@@ -2,17 +2,26 @@ import React from 'react'
 import logo from "../../images/Myntra-icon-logo.svg"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBagShopping, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBagShopping, faBars, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 export function Header() {
   return (
     <>
-      <header className='w-[100%] flex justify-between items-center  bg-[white] sticky z-[9] '>
+      <header className='w-[100%] flex justify-between items-center pb-[20px] bg-[white] '>
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/* logo_section */}
         <div className='logo_section p-[20.77px]'>
           <img src={logo} alt="" className='w-[53px]' />
         </div>
 
-        <div className='categories_name flex items-center justify-between h-[80px]'>
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/* menubar categories_section */}
+
+        <div className='categories_name flex items-center justify-between h-[80px] bg-[white] '>
 
           {/* <------------------------------------------------------------------------------------------------------------------------------------> */}
 
@@ -439,10 +448,17 @@ export function Header() {
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/* menubar_section */}
+        <div className='menubar text-[25px] text-[#494848] absolute left-[100px]'>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+        {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/* search section */}
 
 
-        <div className='search w-[300px] flex items-center p-[5px] pl-[8px] mr-[10px] rounded-[5px] outline outline-[0.5px] outline-[#8080804d] border border-1 border-[blue]'>
+        <div className='search w-[300px] flex items-center p-[5px] pl-[8px] mr-[10px] rounded-[5px] outline outline-[0.5px] outline-[#8080804d]'>
           <div className='search_icon'>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
@@ -456,14 +472,19 @@ export function Header() {
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*  profile_and_cart_section */}
 
-        <div className='profile_and_cart_section flex justify-between items-center w-[90px] mr-[30px] border border-1 border-[green]'>
+        <div className='profile_and_cart_section flex justify-between items-center w-[90px] mr-[30px]'>
 
           <div className='search_icon_section text-center'>
             <div className='search_icon2 text-[20px]'>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div>
-            <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Search</div>
+            <div className='search_heading text-[14px] mt-[-7px] font-[600]'>Search</div>
           </div>
+
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/* profile_section */}
 
           <div className='profile_section text-center'>
             <div className='profile_icon text-[20px]'>
@@ -472,13 +493,20 @@ export function Header() {
             <div className='profile_heading text-[14px] mt-[-7px] font-[600]'>Profile</div>
           </div>
 
-          <div className='cart_section'>
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/*---------------------------------------------------------------------------------------------------------------------------------*/}
+          {/* cart_section */}
+
+          <div className='cart_section text-center'>
             <div className='cart_icon text-[20px]'>
               <FontAwesomeIcon icon={faCartPlus} />
             </div>
             <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Cart</div>
           </div>
         </div>
+
+
       </header >
     </>
   )
