@@ -4,7 +4,7 @@ import './css/index.css';
 import './css/media.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import MainContext from './Contextdata/AdminContext';
+import MainContext from "./Context/MainContext"
 // admin routes
 import { AdminLogin } from './pages/admin/AdminLogin';
 import { Dashboard } from './pages/admin/Dashboard';
@@ -27,7 +27,7 @@ import { Login } from './pages/web/Login';
 import { Register } from './pages/web/Register';
 import { Profile } from './pages/web/Profile';
 import { ChangePassword } from './pages/web/ChangePassword';
-import MyOrders from './pages/web/MyOrders';
+import { MyOrders } from './pages/web/MyOrders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -69,12 +69,12 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/category/add-subcategory",
+    path: "/admin/category/add-sub-category",
     element: <AddSubcategory />,
   },
 
   {
-    path: "/admin/category/view-subcategory",
+    path: "/admin/category/view-sub-category",
     element: <ViewSubCategory />,
   },
 

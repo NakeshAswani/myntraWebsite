@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header } from "../../common/web/Header"
 
-export default function MyOrders() {
+export function MyOrders() {
   return (
     <div>
       <Header />
