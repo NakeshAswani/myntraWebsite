@@ -7,7 +7,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 export function Header() {
   return (
     <>
-      <header className='w-[100%] flex justify-between items-center  bg-[white] '>
+      <header className='w-[100%] flex justify-between items-center  bg-[white] sticky z-[9] '>
         <div className='logo_section p-[20.77px]'>
           <img src={logo} alt="" className='w-[53px]' />
         </div>

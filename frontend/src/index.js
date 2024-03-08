@@ -4,8 +4,9 @@ import './css/index.css';
 import './css/media.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import MainContext from './Contextdata/AdminContext';
 // admin routes
-import { Login } from './pages/admin/Login';
+import { AdminLogin } from './pages/admin/AdminLogin';
 import { Dashboard } from './pages/admin/Dashboard';
 import { AddCategory } from './pages/admin/AddCategory';
 import { ViewCategory } from './pages/admin/ViewCategory';
@@ -17,12 +18,16 @@ import { AddColor } from './pages/admin/AddColor';
 import { ViewColor } from './pages/admin/ViewColor';
 import { Users } from './pages/admin/Users';
 import { Orders } from './pages/admin/Orders';
-import { Profile } from './pages/admin/Profile';
+import { AdminProfile } from './pages/admin/AdminProfile';
 import { AddSlider } from './pages/admin/AddSlider';
 import { ViewSlider } from './pages/admin/ViewSlider';
 // web routes
 import { Home } from './pages/web/Home';
-import MainContext from './Contextdata/AdminContext';
+import { Login } from './pages/web/Login';
+import { Register } from './pages/web/Register';
+import { Profile } from './pages/web/Profile';
+import { ChangePassword } from './pages/web/ChangePassword';
+import MyOrders from './pages/web/MyOrders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -30,12 +35,12 @@ let routes = createBrowserRouter([
   // Admin routes
   {
     path: "/admin",
-    element: <Login />,
+    element: <AdminLogin />,
   },
 
   {
-    path: "/profile",
-    element: <Profile />,
+    path: "/admin/profile",
+    element: <AdminProfile />,
   },
 
   {
@@ -107,6 +112,36 @@ let routes = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
+  {
+    path: "/register",
+    element: <Register />,
+  },
+
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+
+  {
+    path: "/change-password",
+    element: <ChangePassword />,
+  },
+
+  {
+    path: "/change-password",
+    element: <ChangePassword />,
+  },
+
+  {
+    path: "/my-orders",
+    element: <MyOrders />,
   },
 ])
 root.render(

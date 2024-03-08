@@ -1,7 +1,7 @@
 import React from 'react'
 import logo_image from '../../images/Myntra-icon-logo.svg'
 import { Link } from 'react-router-dom'
-export function Login() {
+export function AdminLogin() {
   return (
     <>
       <div className=' container-fluid flex justify-center items-center background_admin h-[100vh]'>
