@@ -32,7 +32,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 1s;
-    top: -1000%;
+    transform: scale(0);
 } 
 
 
@@ -40,6 +40,7 @@
     opacity: 1;
     visibility: visible;
     top: 105%;
+    transform: scale(1);
 }
 
 
@@ -75,10 +76,10 @@
 
 
 .womens_dropdown{
-    top: -700%;
     transition: 1s;
     opacity: 0;
     visibility: hidden;
+    transform: scale(0);
 }
 
 
@@ -86,6 +87,7 @@
     top: 105% !important;
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
 .indian_fusion_list>ul>li:hover{
@@ -117,10 +119,10 @@
 
 
 .kids_dropdown{
-    top: -700%;
     transition: 1s;
     opacity: 0;
     visibility: hidden;
+    transform: scale(0);
 }
 
 
@@ -128,6 +130,7 @@
     top: 105% !important;
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
 
@@ -144,10 +147,10 @@
 /* home living dropdown*/
 
 .home_living_dropdown{
-    top: -700%;
     transition: 1s;
     opacity: 0;
     visibility: hidden;
+    transform: scale(0);
 }
 
 
@@ -155,6 +158,7 @@
     top: 105% !important;
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
 
@@ -178,10 +182,10 @@
 /* beauty dropdown*/
 
 .beauty_dropdown{
-    top: -700%;
     transition: 1s;
     opacity: 0;
     visibility: hidden;
+    transform: scale(0);
 }
 
 
@@ -189,6 +193,7 @@
     top: 105% !important;
     opacity: 1;
     visibility: visible;
+    transform: scale(1);
 }
 
 .menubar{
@@ -200,12 +205,21 @@
     display: none;
 }
 
+.login_btn>button:hover{
+    border: 1px solid #f46172;
+}
+
+.free_border{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.473);
+}
 /* header completed */
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
-
-
+/* footer */
+.social_icons{
+    flex-direction: column;
+}
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
