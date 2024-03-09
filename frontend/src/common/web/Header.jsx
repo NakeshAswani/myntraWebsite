@@ -2,7 +2,7 @@ import React from 'react'
 import logo from "../../images/Myntra-icon-logo.svg"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBagShopping, faBars, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 export function Header() {
   return (

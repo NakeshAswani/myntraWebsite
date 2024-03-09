@@ -232,10 +232,13 @@
 .background_admin{
     background: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
 }
-.circle{
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
+.sideBarOpenClose>:first-child{
+    right: 0px;
+    opacity: 0;
+}
+.sideBarOpenClose:hover>:first-child, .sideBarOpenClose>:first-child:hover{
+    right: -12px;
+    opacity: 1;
 }
 .bgClipColor{
     background: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);

@@ -1,35 +1,26 @@
-import React, { useContext, useEffect } from 'react'
-import logo_image from "../../images/Myntra-icon-logo.svg"
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faGear } from '@fortawesome/free-solid-svg-icons'
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons'
 import { faBell, faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons'
-import { adminContext } from '../../Context/MainContext'
+import logo_image from "../../images/Myntra-icon-logo.svg"
+import { Link } from 'react-router-dom'
 
 export default function Header() {
-  let { sideBar, setSideBar } = useContext(adminContext)
-  let changeData = () => setSideBar(!sideBar);
   return (
-    <header className='bg-[grey] bg-opacity-10'>
+    <header className='bg-[grey] bg-opacity-10 h-[84px]'>
       <div className=' container-fluid shadow-md '>
         <div className='flex items-center px-4 py-3'>
           <div className='flex items-center'>
             <img src={logo_image} width={60} />
-            <div className=' text-[20px] font-bold px-2 '>Myntra</div>
-            {/* {(sideBar) ?
-              :
-              ""
-            } */}
-          </div>
-          <div>
-            <FontAwesomeIcon icon={faBars} className=' ps-5 text-[20px]' onClick={changeData} />
-            <FontAwesomeIcon icon={faEnvelope} className=' ps-5 text-[20px]' />
-            <FontAwesomeIcon icon={faBell} className=' ps-5 text-[20px]' />
+            <div className='text-[20px] font-bold px-2'>Myntra</div>
           </div>
           <div className='ms-auto flex items-center'>
-            <FontAwesomeIcon icon={faGear} className=' ps-5 text-[20px]' />
-            <div className='circle flex items-center justify-center rounded-[50%] mx-[20px] text-center'>
-              <FontAwesomeIcon icon={faUser} className=' text-[40px] text-[white] font-thin ' />
-            </div>
+            <FontAwesomeIcon icon={faEnvelope} className=' ps-5 text-[20px]' />
+            <FontAwesomeIcon icon={faBell} className=' ps-5 text-[20px]' />
+            <FontAwesomeIcon icon={faPowerOff} className=' ps-5 text-[20px]' />
+            <Link to={"/admin/profile"}>
+              <FontAwesomeIcon icon={faUser} className='text-[35px] text-[white] background_admin p-3 rounded-full ms-3' />
+            </Link>
           </div>
         </div>
       </div>

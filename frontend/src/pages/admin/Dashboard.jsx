@@ -13,12 +13,12 @@ export function Dashboard() {
     <div>
       <div>
         <Header />
-        <div className={`grid ${(sideBar) ? "grid-cols-[210px_auto]" : "grid-cols-[130px_auto]"} h-full`}>
+        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} h-[calc(100vh-84px)]`}>
           <Sidebar />
           <div className='w-full'>
             <Location />
             <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor'>Dashboard</h1>
+              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>Dashboard</h1>
               <div className='w-full grid grid-cols-4 gap-x-10 gap-y-10'>
                 <div className='background_admin p-[2px] rounded-lg grid grid-cols-[30%_auto] gap-[2px]'>
                   <div className='bg-[white] rounded-md p-2 text-center text-5xl'>
