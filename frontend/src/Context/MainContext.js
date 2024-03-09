@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
-let adminContext = createContext();
+const adminContext = createContext();
 
-export default function MainContext({children}) {
-    let [sideBar, setSideBar] = useState(true);
+export default function MainContext({ children }) {
+    const [sideBar, setSideBar] = useState(true);
     return (
         <adminContext.Provider value={
             {

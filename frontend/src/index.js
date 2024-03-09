@@ -135,15 +135,11 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/change-password",
-    element: <ChangePassword />,
-  },
-
-  {
     path: "/my-orders",
     element: <MyOrders />,
   },
 ])
+
 root.render(
   <MainContext>
     <RouterProvider router={routes} />
