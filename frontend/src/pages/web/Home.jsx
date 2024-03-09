@@ -1,5 +1,8 @@
 import React from 'react'
+//components
+import { Footer } from '../../common/web/Footer'
 import { Header } from '../../common/web/Header'
+// images
 import discount_coupon from "../../images/download (1).webp"
 import kiara from "../../images/original_products (1).jpeg"
 import ranveer from "../../images/ranveer.jpeg"
@@ -8,16 +11,16 @@ import flat100 from '../../images/flat_one.webp'
 import flat200 from '../../images/flat_two.webp'
 import crazy from "../../images/crazy_deals.webp"
 import categories from '../../images/category.webp'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import men from '../../images/men.webp'
 import women from '../../images/download (3).webp'
+import men from '../../images/men.webp'
 import kids from '../../images/kids.webp'
 import home from '../../images/bedsheets.webp'
 import beauty from '../../images/moisturisers.jpeg'
 import playstore from '../../images/playstore.webp'
-import { Footer } from '../../common/web/Footer'
+//slick slider
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export function Home() {
 
@@ -30,6 +33,46 @@ export function Home() {
     autoplay: true,
     speed: 300,
     loop: true,
+    responsive: [
+      {
+        breakpoint: 1045,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: false,
+        }
+      },
+
+      {
+        breakpoint: 885,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        }
+      },
+
+      {
+        breakpoint: 555,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 355,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      }
+    ]
   };
   return (
     <>
@@ -62,10 +105,7 @@ export function Home() {
           <img src={crazy} alt="" />
           <Slider {...settings} className='w-[100%] '>
 
-
-
-
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={men} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -83,7 +123,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={women} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -101,7 +141,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={kids} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -119,7 +159,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={home} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -138,7 +178,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={beauty} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -158,7 +198,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={men} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -176,7 +216,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={women} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -194,7 +234,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={kids} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -212,7 +252,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={home} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -231,7 +271,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={beauty} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -250,7 +290,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={men} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -268,7 +308,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={women} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -286,7 +326,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={kids} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -304,7 +344,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={home} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -323,7 +363,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={beauty} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -341,7 +381,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={men} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -359,7 +399,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={women} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -377,7 +417,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px]'>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={kids} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -395,7 +435,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={home} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -414,7 +454,7 @@ export function Home() {
 
 
 
-            <div className=' h-[359px] '>
+            <div className=' h-[359px] slider1'>
               <div className='img_section w-[100%] h-[78%]'>
                 <img src={beauty} alt="" className='w-[100%] h-[100%]' />
               </div>
@@ -440,15 +480,15 @@ export function Home() {
 
         <section className='playstore w-[100%]'>
           <a href="https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059?mt=8">
-          <img src={playstore} alt="" className='w-[100%]' />
+            <img src={playstore} alt="" className='w-[100%]' />
           </a>
         </section>
 
 
         <section className='w-[100%]'>
-          <Footer/>
+          <Footer />
         </section>
-        
+
 
       </main>
     </>
@@ -466,10 +506,69 @@ export function SimpleSlider() {
     autoplay: true,
     speed: 300,
     loop: true,
+    responsive: [
+      {
+        breakpoint: 1246,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          infinite: true,
+          dots: false,
+        }
+      },
+
+      {
+        breakpoint: 1071,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          infinite: true,
+          dots: false,
+        }
+      },
+
+      {
+        breakpoint: 910,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 722,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 578,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 355,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        }
+      }
+    ]
+    
   };
   return (
     <Slider {...settings}>
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={men} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -481,7 +580,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={women} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -491,9 +590,9 @@ export function SimpleSlider() {
           <h4>Oversized Cotton T-shirt</h4>
         </div>
       </div>
-     
 
-      <div className=' h-[288px]'>
+
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={kids} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -505,7 +604,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={home} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -517,7 +616,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={beauty} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -528,7 +627,7 @@ export function SimpleSlider() {
         </div>
       </div>
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={men} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -540,7 +639,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={women} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -550,9 +649,9 @@ export function SimpleSlider() {
           <h4>Oversized Cotton T-shirt</h4>
         </div>
       </div>
-     
 
-      <div className=' h-[288px]'>
+
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={kids} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -564,7 +663,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={home} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -576,7 +675,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={beauty} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -587,7 +686,7 @@ export function SimpleSlider() {
         </div>
       </div>
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={men} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -599,7 +698,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={women} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -609,9 +708,9 @@ export function SimpleSlider() {
           <h4>Oversized Cotton T-shirt</h4>
         </div>
       </div>
-     
 
-      <div className=' h-[288px]'>
+
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={kids} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -623,7 +722,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={home} alt="" className='w-[100%] h-[100%]' />
         </div>
@@ -635,7 +734,7 @@ export function SimpleSlider() {
       </div>
 
 
-      <div className=' h-[288px]'>
+      <div className=' h-[288px] category_slider'>
         <div className='img_section w-[100%] h-[78%]'>
           <img src={beauty} alt="" className='w-[100%] h-[100%]' />
         </div>

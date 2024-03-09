@@ -486,11 +486,29 @@ export function Header() {
           {/*---------------------------------------------------------------------------------------------------------------------------------*/}
           {/* profile_section */}
 
-          <div className='profile_section text-center'>
+          <div className='profile_section text-center relative'>
             <div className='profile_icon text-[20px]'>
               <FontAwesomeIcon icon={faUser} />
             </div>
             <div className='profile_heading text-[14px] mt-[-7px] font-[600]'>Profile</div>
+
+
+            <div className=' w-[320px] bg-[white] p-[20px] absolute top-[186%] left-[-500%]'>
+              <p className='font-[700] text-start text-[13px]'>Welcome</p>
+              <p className='text-[14px] text-start'>To access account and manage orders</p>
+
+              <div className='flex items-start login_btn'>
+                <button className='text-color3 font-[750] text-[15px] p-[5px] px-[10px] mt-[10px] border border-1 border-[#8080808a]'>LOGIN / SIGNUP</button>
+              </div>
+
+              <div className='w-[100%] my-[15px] free_border'></div>
+
+              <ul className='text-start text-[#5a5959] text-[15px]'>
+                <Link><li>Orders</li></Link>
+                <Link><li>About Us</li></Link>
+                <Link><li>Contact Us</li></Link>  
+              </ul>
+            </div>
           </div>
 
           {/*---------------------------------------------------------------------------------------------------------------------------------*/}
