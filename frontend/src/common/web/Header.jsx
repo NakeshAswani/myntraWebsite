@@ -7,14 +7,16 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 export function Header() {
   return (
     <>
-      <header className='w-[100%] flex justify-between items-center pb-[20px] bg-[white] '>
+      <header className='w-[100%] flex justify-between items-center bg-[white] shadow-md'>
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/* logo_section */}
-        <div className='logo_section p-[20.77px]'>
-          <img src={logo} alt="" className='w-[53px]' />
-        </div>
+        <Link to={"/"}>
+          <div className='logo_section p-[20.77px]'>
+            <img src={logo} alt="" className='w-[53px]' />
+          </div>
+        </Link>
 
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
         {/*---------------------------------------------------------------------------------------------------------------------------------*/}
@@ -493,20 +495,22 @@ export function Header() {
             <div className='profile_heading text-[14px] mt-[-7px] font-[600]'>Profile</div>
 
 
-            <div className=' w-[320px] bg-[white] p-[20px] absolute top-[186%] left-[-500%]'>
+            <div className=' w-[320px] bg-[white] p-[20px] absolute top-[140%] left-[-500%] shadow-md headerProfileBox'>
               <p className='font-[700] text-start text-[13px]'>Welcome</p>
               <p className='text-[14px] text-start'>To access account and manage orders</p>
 
               <div className='flex items-start login_btn'>
-                <button className='text-color3 font-[750] text-[15px] p-[5px] px-[10px] mt-[10px] border border-1 border-[#8080808a]'>LOGIN / SIGNUP</button>
+                <Link to={"/register"}>
+                  <button className='text-color3 font-[750] text-[15px] p-[5px] px-[10px] mt-[10px] border border-1 border-[#8080808a]'>LOGIN / SIGNUP</button>
+                </Link>
               </div>
 
               <div className='w-[100%] my-[15px] free_border'></div>
 
               <ul className='text-start text-[#5a5959] text-[15px]'>
-                <Link><li>Orders</li></Link>
-                <Link><li>About Us</li></Link>
-                <Link><li>Contact Us</li></Link>  
+                <Link to={"/my-orders"}><li>Orders</li></Link>
+                <Link to={"/about-us"}><li>About Us</li></Link>
+                <Link to={"/contact-us"}><li>Contact Us</li></Link>
               </ul>
             </div>
           </div>
@@ -517,10 +521,12 @@ export function Header() {
           {/* cart_section */}
 
           <div className='cart_section text-center'>
-            <div className='cart_icon text-[20px]'>
-              <FontAwesomeIcon icon={faCartPlus} />
-            </div>
-            <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Cart</div>
+            <Link to={"/cart"}>
+              <div className='cart_icon text-[20px]'>
+                <FontAwesomeIcon icon={faCartPlus} />
+              </div>
+              <div className='cart_heading text-[14px] mt-[-7px] font-[600]'>Cart</div>
+            </Link>
           </div>
         </div>
 

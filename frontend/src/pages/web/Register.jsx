@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from '../../common/web/Header'
+import { Link } from 'react-router-dom'
 
 export function Register() {
     return (
@@ -7,7 +8,7 @@ export function Register() {
             <Header />
             <div className='w-full px-3'>
                 <div className='py-12'>
-                    <div className='w-1/2 mx-auto rounded-lg background_admin p-[2px]'>
+                    <div className='w-1/2 mx-auto rounded-lg background_admin p-[2px] mb-4'>
                         <form className='w-full bg-[white] p-4 rounded-lg shadow-xl'>
                             <h1 className='font-bold text-3xl text-center mb-4'>
                                 <span className='text-[#f8581c] me-1'>Register</span>
@@ -54,6 +55,7 @@ export function Register() {
                             </div>
                         </form>
                     </div>
+                    <p className='w-1/2 mx-auto text-center font-semibold'>Already a user? <Link to={"/login"} className='underline'>Login</Link></p>
                 </div>
             </div>
         </div>

@@ -220,6 +220,18 @@
 .social_icons{
     flex-direction: column;
 }
+.headerProfileBox{
+    height: 0;
+    font-size: 0px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.5s;
+}
+.profile_section:hover .headerProfileBox{
+    height: auto;
+    font-size: auto;
+    transform: scale(1);
+}
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */

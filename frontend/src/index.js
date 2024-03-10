@@ -28,6 +28,10 @@ import { Register } from './pages/web/Register';
 import { Profile } from './pages/web/Profile';
 import { ChangePassword } from './pages/web/ChangePassword';
 import { MyOrders } from './pages/web/MyOrders';
+import { Cart } from './pages/web/Cart';
+import About from './pages/web/About';
+import Contact from './pages/web/Contact';
+import Products from './pages/web/Products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -137,6 +141,26 @@ let routes = createBrowserRouter([
   {
     path: "/my-orders",
     element: <MyOrders />,
+  },
+
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+
+  {
+    path: "/about-us",
+    element: <About />,
+  },
+
+  {
+    path: "/contact-us",
+    element: <Contact />,
+  },
+
+  {
+    path: "/products",
+    element: <Products />,
   },
 ])
 

@@ -12,9 +12,9 @@ import { Link } from 'react-router-dom'
 export function Footer() {
     return (
         <>
-            <footer className=' flex-wrap   w-[100%] mt-[25px]  pt-[30px] flex justify-evenly'>
+            <footer className='flex-wrap w-[100%] flex justify-evenly'>
 
-                <div className='footer_inner flex-wrap  w-[100%] mt-[25px] flex justify-evenly '>
+                <div className='footer_inner flex-wrap  w-[100%] my-[25px] flex justify-evenly '>
                     <div className='flex justify-evenly'>
                         <div className=' categories_footer w-[150px]  leading-7'>
                             <h5 className='font-[1000] text-[13px] text-[#424242]'>CATEGORIES</h5>
@@ -98,7 +98,14 @@ export function Footer() {
                     </div>
 
                 </div>
-                <div className=''></div>
+                <div className='w-full px-28 border-t-[1px] border-[black] border-opacity-50 py-[10px] flex justify-between'>
+                    <p>
+                        © 2024 www.myntra.com. All rights reserved.
+                    </p>
+                    <p>
+                        A Flipkart company
+                    </p>
+                </div>
             </footer>
         </>
     )
