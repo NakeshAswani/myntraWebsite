@@ -1,4 +1,8 @@
 import React from 'react'
+
+export function Address() {
+  return (
+    import React from 'react'
 import '../../css/media.css'
 
 import logo from '../../images/Myntra-icon-logo.svg'
@@ -204,5 +208,7 @@ export function Cart() {
         </div>  
       </section >
     </div >
+  )
+}
   )
 }
