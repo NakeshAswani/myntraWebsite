@@ -32,6 +32,9 @@ import { Cart } from './pages/web/Cart';
 import About from './pages/web/About';
 import Contact from './pages/web/Contact';
 import Products from './pages/web/Products';
+import { Address } from './pages/web/Address';
+import Payment from './pages/web/Payment';
+import { Product_description } from './pages/web/Product_description';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -162,6 +165,22 @@ let routes = createBrowserRouter([
     path: "/products",
     element: <Products />,
   },
+
+  {
+    path:"/address",
+    element:<Address/>
+  },
+
+  {
+    path:"/payment",
+    element:<Payment/>
+  },
+
+  {
+    path:"/product/product-description",
+    element:<Product_description/>
+  }
+  
 ])
 
 root.render(

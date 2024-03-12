@@ -8,7 +8,8 @@ import { faAngleRight, faStar } from '@fortawesome/free-solid-svg-icons'
 
 export default function Products() {
     return (
-        <div>
+        <div className='main1'>
+
             <Header />
             <div className='py-10'>
                 <Location />

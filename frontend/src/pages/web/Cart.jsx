@@ -13,6 +13,7 @@ import { Header } from "../../common/web/Header"
 import { Footer } from '../../common/web/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 export function Cart() {
   return (
@@ -179,7 +180,7 @@ export function Cart() {
                 <div className='w-[100%] border-b-2 border-[#615e5ebd] my-[10px]'></div>
                 <div className='total w-[100%] flex justify-between font-[700] text-[#383838] pb-[10px]'>Total Amount<p>₹491</p></div>
                 <div className='place_order_btn flex justify-center'>
-                  <button className=' w-[calc(100%-10px)] p-[10px] bg-[#ff446a] text-[white] '>PLACE ORDER</button>
+                <Link to={"/address"} className='w-[calc(100%-10px)] flex items-center justify-center'><button className='w-[calc(100%-10px)] p-[10px] bg-[#ff446a] text-[white] '> PLACE ORDER</button></Link>
                 </div>
               </div>
             </div>
