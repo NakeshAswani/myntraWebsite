@@ -13,20 +13,20 @@ import { Footer } from '../../common/web/Footer'
 export function Product_description() {
     return (
         <>
-            <div className='main1 border border-1 border-[red]'>
+            <div className='main1 '>
                 <Header />
 
                 <div className=' p-[20px]'>
                     <p className='text-[14px]'>Home/Clothing/Men Clothing/Tshirts/<span className='font-[550]'> BULLMER Tshirts > More By BULLMER</span></p>
                     <div className='flex mt-[10px]'>
-                        <div className='w-[720px] border flex flex-wrap'>
+                        <div className='w-[720px] flex flex-wrap'>
                             <img src={des_img1} alt="" className='w-[340px] mx-[5px] mt-[10px]' />
                             <img src={des_img2} alt="" className='w-[340px] mx-[5px] mt-[10px]' />
                             <img src={des_img3} alt="" className='w-[340px] mx-[5px] mt-[10px]' />
                             <img src={des_img4} alt="" className='w-[340px] mx-[5px] mt-[10px]' />
                             <img src={des_img5} alt="" className='w-[340px] mx-[5px] mt-[10px]' />
                         </div>
-                        <div className='w-[540px] border border-1 border-color2 p-[5px]'>
+                        <div className='w-[540px]  p-[5px]'>
 
                             <div className='border-b-2 border-[#80808056]'>
                                 <h1 className='text-[25px] font-[650]'>BULLMER</h1>
