@@ -236,6 +236,18 @@
 .size_round:hover{
     border: 1px solid #ff436a;
 }
+
+.login_number>input[type=number]::-webkit-inner-spin-button,
+.login_number>input[type=number]::-webkit-outer-spin-button{
+    appearance: none;
+}
+
+.register_number>input[type=number]::-webkit-inner-spin-button,
+.register_number>input[type=number]::-webkit-outer-spin-button{
+    appearance: none;
+}
+
+
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */

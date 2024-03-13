@@ -1,40 +1,27 @@
 import React from 'react'
+import '../../css/index.css';
 import { Header } from '../../common/web/Header'
+import loginimage from "../../images/loginimage.webp";
 
 export function ChangePassword() {
     return (
-        <div>
+        <div className='main1'>
             <Header />
-            <div className='w-full px-3'>
-                <div className='py-12'>
-                    <div className='w-1/2 mx-auto rounded-lg background_admin p-[2px]'>
-                        <form className='w-full bg-[white] p-4 rounded-lg shadow-xl'>
-                            <h1 className='font-bold text-3xl text-center mb-4'>
-                                <span className='text-[#f8581c] me-1'>Change</span>
-                                <span className='text-[#ff59bd]'>Password</span>
-                            </h1>
-                            <div className='mb-4'>
-                                <label className='block mb-2 font-semibold text-[red] text-[18px]'>Old Password *</label>
-                                <div className='w-full background_admin p-[2px] rounded-md'>
-                                    <input type="password" className='w-full bg-white p-1 rounded-md focus-visible:outline-offset-[3px]' />
-                                </div>
-                            </div>
-                            <div className='mb-4'>
-                                <label className='block mb-2 font-semibold text-[red] text-[18px]'>New Password *</label>
-                                <div className='w-full background_admin p-[2px] rounded-md'>
-                                    <input type="password" className='w-full bg-white p-1 rounded-md focus-visible:outline-offset-[3px]' />
-                                </div>
-                            </div>
-                            <div className='mb-4'>
-                                <label className='block mb-2 font-semibold text-[red] text-[18px]'>Confirm Password *</label>
-                                <div className='w-full background_admin p-[2px] rounded-md'>
-                                    <input type="password" className='w-full bg-white p-1 rounded-md focus-visible:outline-offset-[3px]' />
-                                </div>
-                            </div>
-                            <div className='mx-auto w-max rounded-lg background_admin p-[2px]'>
-                                <input type='submit' value={"Submit"} className='bg-[white] text-[18px] font-medium px-3 py-2 rounded-lg hover:bg-[transparent] hover:text-[white] transition' />
-                            </div>
-                        </form>
+            <div className='register_page bg-gradient-to-r from-[#feeef1] to-[#fdefe8] w-[100%] flex items-center justify-center '>
+                <div className=' my-[66px]'>
+
+                    <div className='register_section w-[100%] py-[100px] px-[35px] bg-[white]'>
+                        <p className='text-[19px] text-[#424552] font-[600]'>Reset Password</p>
+
+                        <p className='text-[12px] mt-[10px]'>Enter your email or mobile number and we’ll send a link on your <br/> email to reset your password.</p>
+
+                        <div className='flex register_number items-center border border-1 border-[grey] p-[7px] my-[20px]'>
+                            <input type="number" className='w-[100%] outline-none text-[14px]' inputMode="numeric" max="9999999999" min="6000000000" pattern="[0-9]+" placeholder="Mobile Number" />
+                        </div>
+
+                        <button className='w-[100%] p-[8px] bg-color4 text-[white] font-[650] mb-[10px]'>SEND LINK</button>
+
+                        <p className='text-[13px] text-[grey]'>Unable to reset password? <span className='text-color4'>Get help</span></p>
                     </div>
                 </div>
             </div>

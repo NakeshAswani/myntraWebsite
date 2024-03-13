@@ -2,9 +2,10 @@ import React from 'react'
 import { Header } from '../../common/web/Header'
 import { Footer } from '../../common/web/Footer'
 import Location from '../../common/web/Location'
-import topwearImg from "../../images/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.webp"
+import topwearImg from "../../images/product_img.webp"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faStar } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 export default function Products() {
     return (
@@ -51,159 +52,375 @@ export default function Products() {
                         </div>
                     </div>
                     <div className='p-6'>
+
+
                         <div className='pb-10 grid grid-cols-4 gap-x-16 gap-y-8'>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
-                            <div>
-                                <figure className='relative'>
-                                    <img src={topwearImg} />
-                                    <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
-                                        4.3
-                                        <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
-                                        <span className='px-1'>9.6k</span>
-                                    </span>
-                                </figure>
-                                <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
-                                    <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
-                                    <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
-                                    <p className='text-[13px]'>
-                                        <span className='font-semibold'>Rs. 598</span>
-                                        <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
-                                        <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
-                                    </p>
-                                </figcaption>
-                            </div>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+                            <Link to={"/product/product-description"}>
+                                <div>
+                                    <figure className='relative'>
+                                        <img src={topwearImg} />
+                                        <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60'>
+                                            4.3
+                                            <FontAwesomeIcon icon={faStar} className='px-1 border-r' />
+                                            <span className='px-1'>9.6k</span>
+                                        </span>
+                                    </figure>
+                                    <figcaption className='py-2 px-2 bg-[grey] bg-opacity-5'>
+                                        <h3 className='text-[15px] font-bold'>Mast & Harbour</h3>
+                                        <p className='text-[14px]'>Men Slim Fit Casual Sustainab...</p>
+                                        <p className='text-[13px]'>
+                                            <span className='font-semibold'>Rs. 598</span>
+                                            <span className='text-[11px] text-[black] text-opacity-50 line-through px-1'>Rs. 2099</span>
+                                            <span className='text-[11px] text-[red] text-opacity-60'>(Rs. 1501 OFF)</span>
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </Link>
+
+
+
                             <div className='border-t pt-8 col-span-4 grid grid-cols-[30%_auto] items-center'>
                                 <div className='text-[14px]'>
                                     Page 1 of 10

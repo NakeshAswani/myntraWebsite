@@ -37,7 +37,7 @@ export function Header() {
                 <div className='top_wear_list '>
                   <ul className='font-[100] leading-[27px]'>
                     {/* category */}
-                    <li className='font-[700] text-[14px] text-color3 mb-[5px]'>Topwear</li>
+                    <li className='font-[700] text-[14px] text-color3 mb-[5px]'><Link to={"/products"}>Topwear</Link></li>
                     {/* topwear subcategory */}
                     <li className='text-[14px] font-[400]'>T-Shirts</li>
                     <li className='text-[14px] font-[400]'>Casual Shirts</li>
