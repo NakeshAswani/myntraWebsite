@@ -36,7 +36,7 @@ export default function Sidebar() {
   };
   return (
     <div>
-      <div className={`${(sideBar) ? 'w-[200px] shadow-md' : 'w-[100px] shadow-md'} p-[10px] transition-[0.8s] bg-[black] bg-opacity-85 text-[white] h-full relative sideBarOpenClose`}>
+      <div className={`${(sideBar) ? 'w-[200px] shadow-md' : 'w-[100px] shadow-md'} fixed h-[calc(100vh - 84px)] p-[10px] transition-[0.8s] bg-[black] bg-opacity-85 text-[white] h-full sideBarOpenClose`}>
         <div className='absolute top-[281px] text-[black] text-[18px] transition-[0.5s] cursor-pointer' onClick={()=>{
           changeData()
           mainOpen()

@@ -10,7 +10,7 @@ export function AddSubcategory() {
     <div>
       <div>
         <Header />
-        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} h-full`}>
+        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
             <Location />

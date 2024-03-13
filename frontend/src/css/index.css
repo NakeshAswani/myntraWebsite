@@ -274,4 +274,16 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+.file_upload{
+    position: relative;
+}
+
+.file_upload[type=file]::-webkit-file-upload-button{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
 /* Admin login page */

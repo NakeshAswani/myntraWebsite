@@ -13,7 +13,7 @@ export function Dashboard() {
     <div>
       <div>
         <Header />
-        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} h-[calc(100vh-84px)]`}>
+        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
             <Location />

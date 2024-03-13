@@ -488,7 +488,7 @@ export function Header() {
           {/*---------------------------------------------------------------------------------------------------------------------------------*/}
           {/* profile_section */}
 
-          <div className='profile_section text-center relative'>
+          <div className='profile_section text-center relative z-[99]'>
             <div className='profile_icon text-[20px]'>
               <FontAwesomeIcon icon={faUser} />
             </div>

@@ -10,7 +10,7 @@ export function AddColor() {
     <div>
       <div>
         <Header />
-        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} h-full`}>
+        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
             <Location />
@@ -33,7 +33,7 @@ export function AddColor() {
                   <label className='block text-[18px] font-medium mb-1'>Color Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                     <input type="radio" name='status' value={1} className='me-1' />Active<br />
-                    <input type="radio" name='status' value={0} className='me-1' />De-Active
+                    <input type="radio" name='status' value={0} className='me-1' />De-Active <br/>
                   </div>
                 </div>
               </form>

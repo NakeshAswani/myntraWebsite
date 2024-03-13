@@ -10,7 +10,7 @@ export function AddSlider() {
     <div>
       <div>
         <Header />
-        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} h-full`}>
+        <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
             <Location />
@@ -32,7 +32,7 @@ export function AddSlider() {
                 <div className='mb-6'>
                   <label className='block text-[18px] font-medium mb-1'>Slider Image <span className='text-[red]'>*</span></label>
                   <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="file" className='w-full bg-[white] rounded-md p-1' />
+                    <input type="file" className=' file_upload w-full bg-[white] rounded-md p-1' />
                   </div>
                 </div>
                 <div className='mb-6'>

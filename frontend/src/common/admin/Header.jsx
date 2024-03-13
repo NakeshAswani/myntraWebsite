@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <header className='bg-[grey] bg-opacity-10 h-[84px]'>
+    <header className='bg-[white]  h-[84px] fixed w-full'>
       <div className=' container-fluid shadow-md '>
         <div className='flex items-center px-4 py-3'>
           <div className='flex items-center'>
