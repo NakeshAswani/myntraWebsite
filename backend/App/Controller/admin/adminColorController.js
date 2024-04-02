@@ -28,7 +28,7 @@ exports.addColor = async (request, response) => {
             resObj={
                 status: 0,
                 message: "! fill all fields !",
-                data: error
+                error
             }
         }
     }
@@ -44,7 +44,7 @@ exports.addColor = async (request, response) => {
             resObj={
                 status: 0,
                 message: "! data updation unsuccessfull !",
-                data: error
+                error
             }
         }
     }
@@ -65,7 +65,7 @@ exports.viewColor = async (request, response) => {
         resObj={
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -85,7 +85,7 @@ exports.deleteColor = async (request, response) => {
         resObj={
             status: 0,
             message: "! data deletion unsuccessfull !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -106,7 +106,7 @@ exports.editColor=async(request,response)=>{
         resObj={
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)

@@ -7,11 +7,7 @@ const subCategorySchema = new Schema({
     subCategoryName: {
         type: String,
         required: true,
-        unique: true
-    },
-    categoryName: {
-        type: String,
-        required: true
+        lowercase: true
     },
     categoryId: {
         type: Schema.Types.ObjectId,
@@ -20,7 +16,8 @@ const subCategorySchema = new Schema({
     },
     subCategoryDescription: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     subCategoryImage: {
         type: String,

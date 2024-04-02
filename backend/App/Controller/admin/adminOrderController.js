@@ -6,8 +6,8 @@ const userRegistrationModel = require("../../Model/userRegistrationModel");
 // Nodemailer function
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // Use `true` for port 465, `false` for all other ports
+    port: 465,
+    secure: true, // Use `true` for port 465, `false` for all other ports
     auth: {
         user: "nakesh270704@gmail.com",
         pass: "cjglikzeyooccgtz",
@@ -29,7 +29,7 @@ exports.viewOrder = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -56,7 +56,7 @@ exports.deleteOrder = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data deletion unsuccessfull !",
-            data: error
+            error
         }
     }
     response.send(resObj)

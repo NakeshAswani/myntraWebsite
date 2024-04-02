@@ -34,7 +34,7 @@ import Contact from './pages/web/Contact';
 import Products from './pages/web/Products';
 import { Address } from './pages/web/Address';
 import Payment from './pages/web/Payment';
-import { Product_description } from './pages/web/Product_description';
+import { ProductDescription } from './pages/web/ProductDescription';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // creating browser routes
@@ -178,7 +178,7 @@ let routes = createBrowserRouter([
 
   {
     path:"/product/product-description",
-    element:<Product_description/>
+    element:<ProductDescription/>
   }
   
 ])

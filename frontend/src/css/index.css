@@ -3,201 +3,26 @@
 @tailwind utilities;
 
 
-.categories_inner1:hover{
-    border-bottom: 3px solid #f46172;
+.categories_inner:hover{
+    transition: 0.8s;
+    --tw-border-opacity: 1;
 }
-
-.categories_inner2:hover{
-    border-bottom: 3px solid #ff59bd;
+.menubar{
+    display: none;
 }
-
-.categories_inner3:hover{
-    border-bottom: 3px solid #f86c20;
-}
-
-.categories_inner4:hover{
-    border-bottom: 3px solid #f3c338;
-}
-
-
-.categories_inner5:hover{
-    border-bottom: 3px solid #00b6af;
-}
-
-
-
-/* mens dropdown */
-
- .mens_dropdown{
+/* dropdown */
+.dropdown{
     opacity: 0;
     visibility: hidden;
-    transition: 1s;
-    transform: scale(0);
-} 
-
-
-.categories_inner1:hover .mens_dropdown{
+    transition: 0.8s;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+.categories_inner:hover .dropdown{
     opacity: 1;
     visibility: visible;
     top: 105%;
-    transform: scale(1);
-}
-
-
-
-/* mens dropdown sections */
-
-.top_wear_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.india_festive_list>ul>li:hover{
-    font-weight: 700;
-}
-
-
-.bottom_wear_list>ul>li:hover{
-    font-weight: 700;
-}
-
-
-.innerwear_sleepwear_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.plus_size_list>ul>li:hover{
-    font-weight: 700;
-}
-
-
-
-
-/* womens dropdown  */
-
-
-.womens_dropdown{
-    transition: 1s;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-}
-
-
-.categories_inner2:hover .womens_dropdown{
-    top: 105% !important;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-.indian_fusion_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.rain_jackets>ul>li:hover{
-    font-weight: 700;
-}
-
-
-.Watches_Wearables>ul>li:hover{
-    font-weight: 700;
-}
-
-
-.Western_wear_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.women_plus_size_list>ul>li{
-    font-weight: 700;
-}
-
-
-
-
-/* kids dropdown  */
-
-
-.kids_dropdown{
-    transition: 1s;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-}
-
-
-.categories_inner3:hover .kids_dropdown{
-    top: 105% !important;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-
-.boys_clothing_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.girls_clothing_list>ul>li:hover{
-    font-weight: 700;
-}
-
-
-
-/* home living dropdown*/
-
-.home_living_dropdown{
-    transition: 1s;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-}
-
-
-.categories_inner4:hover .home_living_dropdown{
-    top: 105% !important;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-
-.bed_linen_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.flooring_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.bath_list>ul>li:hover{
-    font-weight: 700;
-}
-
-.floor_lamps>ul>li:hover{
-    font-weight: 700;
-}
-
-
-/* beauty dropdown*/
-
-.beauty_dropdown{
-    transition: 1s;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-}
-
-
-.categories_inner5:hover .beauty_dropdown{
-    top: 105% !important;
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-.menubar{
-    display: none;
+    transform: scaleY(1);
 }
 /* search icon media responsive*/
 
@@ -246,15 +71,6 @@
 .register_number>input[type=number]::-webkit-outer-spin-button{
     appearance: none;
 }
-
-
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------------------- */
-
 
 /* Admin login page */
 .background_admin{

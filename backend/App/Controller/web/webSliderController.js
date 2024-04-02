@@ -6,7 +6,7 @@ exports.viewSlider=async(request,response)=>{
     let resObj
     try{
         const sliderData=await sliderModel.find()
-        const sliderImageLink = "http://localhost:1323/Uploads/Slider"
+        const sliderImageLink = "http://localhost:1323/Uploads/Slider/"
         resObj={
             status: 1,
             message: "! data found !",
@@ -18,7 +18,7 @@ exports.viewSlider=async(request,response)=>{
         resObj={
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)

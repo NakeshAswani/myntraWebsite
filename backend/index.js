@@ -1,17 +1,19 @@
 // importing the necessary packages and file
 const express = require("express");
 const cors = require("cors");
-const useragent = require('express-useragent');
 const mongoose = require('mongoose');
+const useragent = require('express-useragent');
 const router = require("./App/router");
 
 // making server variable use the followings
 const server = express();
 server.use(cors());
 server.use(express.json());
-server.use(router);
 server.use(useragent.express());
+server.use(router);
+server.use("/Uploads/Cart", express.static("Uploads/Cart"));
 server.use("/Uploads/Category", express.static("Uploads/Category"));
+server.use("/Uploads/Order", express.static("Uploads/Order"));
 server.use("/Uploads/Products", express.static("Uploads/Products"));
 server.use("/Uploads/Slider", express.static("Uploads/Slider"));
 server.use("/Uploads/SubCategory", express.static("Uploads/SubCategory"));

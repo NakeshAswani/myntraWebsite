@@ -6,7 +6,7 @@ const { viewProduct } = require("../../Controller/web/webProductController");
 const webProductRoutes=express.Router();
 
 // using webProductRoutes variable to create routes
-webProductRoutes.get("view-product",viewProduct)
+webProductRoutes.get("/view-product",viewProduct)
 
 // exporting webProductRoutes variable
 module.exports=webProductRoutes;

@@ -5,6 +5,7 @@ const sliderModel = require("../../Model/sliderModel")
 
 // slider functions start
 exports.addSlider = async (request, response) => {
+    const sliderNumber = request.body.sliderNumber
     const sliderName = request.body.sliderName
     const sliderDescription = request.body.sliderDescription
     let sliderImage
@@ -28,6 +29,7 @@ exports.addSlider = async (request, response) => {
         sliderImage = request.file.filename
     }
     const obj = {
+        sliderNumber,
         sliderName,
         sliderDescription,
         sliderImage,
@@ -48,7 +50,7 @@ exports.addSlider = async (request, response) => {
             resObj={
                 status: 0,
                 message: "! fill all fields !",
-                data: error
+                error
             }
         }
     }
@@ -64,7 +66,7 @@ exports.addSlider = async (request, response) => {
             resObj={
                 status: 0,
                 message: "! data updation unsuccessfull !",
-                data: error
+                error
             }
         }
     }
@@ -75,7 +77,7 @@ exports.viewSlider = async (request, response) => {
     let resObj
     try {
         const allData = await sliderModel.find()
-        const sliderImageLink = "http://localhost:1323/Uploads/Slider"
+        const sliderImageLink = "http://localhost:1323/Uploads/Slider/"
         resObj={
             status: 1,
             message: "! data found !",
@@ -87,7 +89,7 @@ exports.viewSlider = async (request, response) => {
         resObj={
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -111,7 +113,7 @@ exports.deleteSlider = async (request, response) => {
         resObj={
             status: 0,
             message: "! data deletion unsuccessfull !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -132,7 +134,7 @@ exports.editSlider=async(request,response)=>{
         resObj={
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)

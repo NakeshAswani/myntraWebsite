@@ -4,13 +4,19 @@ const { Schema, model } = mongoose;
 
 // creating sliderSchema
 const sliderSchema = new Schema({
+    sliderNumber:{
+        type: Number,
+        required: true
+    },
     sliderName: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     sliderDescription: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     sliderImage: {
         type: String,

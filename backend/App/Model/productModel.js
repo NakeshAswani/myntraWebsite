@@ -6,15 +6,13 @@ const { Schema, model } = mongoose;
 const productSchema = new Schema({
     productName: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     categoryName: {
         type: String,
-        required: true
-    },
-    subCategoryName: {
-        type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     subCategoryId: {
         type: Schema.Types.ObjectId,
@@ -22,16 +20,33 @@ const productSchema = new Schema({
         required: true
     },
     productPrice: {
-        type: String,
-        required: true
+        type: Number,
+        required: true,
+        lowercase: true
+    },
+    finalPrice: {
+        type: Number,
+        required: true,
+        lowercase: true
     },
     productDescription: {
         type: String,
+        required: true,
+        lowercase: true
+    },
+    productRating: {
+        type: Number,
         required: true
+    },
+    ratingCount: {
+        type: String,
+        required: true,
+        lowercase: true
     },
     productColor: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     productImage: {
         type: String,

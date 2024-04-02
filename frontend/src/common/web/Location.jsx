@@ -1,11 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-export default function Location() {
+export default function Location({ urlIdToName }) {
     const location = useLocation()
     return (
-        <div className='px-5'>
-            {"Home"+location.pathname}
+        <div className='px-5 capitalize'>
+            {"Home" + location.pathname + urlIdToName}
         </div>
     )
 }

@@ -2,11 +2,11 @@ import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight, faAnglesRight, faCopyright, faLaptop, faPalette, faShoppingCart, faSliders, faUsers } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { adminContext } from '../../Context/MainContext';
+import { myntraContext } from '../../Context/MainContext';
 import { faProductHunt } from '@fortawesome/free-brands-svg-icons';
 
 export default function Sidebar() {
-  let { sideBar, setSideBar } = useContext(adminContext)
+  let { sideBar, setSideBar } = useContext(myntraContext)
   let changeData = () => setSideBar(!sideBar);
   const [open, setOpen] = useState({
     slider: false,

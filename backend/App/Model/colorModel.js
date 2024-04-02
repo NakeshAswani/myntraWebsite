@@ -7,11 +7,13 @@ const colorSchema = new Schema({
     colorName: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        lowercase: true
     },
     colorDescription: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     status: {
         type: Number,

@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import Header from '../../common/admin/Header'
 import Sidebar from '../../common/admin/Sidebar'
 import Location from '../../common/admin/Location'
-import { adminContext } from '../../Context/MainContext'
+import { myntraContext } from '../../Context/MainContext'
 
 export function AddSubcategory() {
-  const { sideBar } = useContext(adminContext)
+  const { sideBar } = useContext(myntraContext)
   return (
     <div>
       <div>

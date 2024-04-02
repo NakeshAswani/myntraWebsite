@@ -7,10 +7,12 @@ const productModel = require("../../Model/productModel")
 exports.addProduct = async (request, response) => {
     const productName = request.body.productName
     const categoryName = request.body.categoryName
-    const subCategoryName = request.body.subCategoryName
     const subCategoryId = request.body.subCategoryId
     const productPrice = request.body.productPrice
+    const finalPrice = request.body.finalPrice
     const productDescription = request.body.productDescription
+    const productRating = request.body.productRating
+    const ratingCount = request.body.ratingCount
     const productColor = request.body.productColor
     let productImage
     const status = request.body.status
@@ -35,10 +37,12 @@ exports.addProduct = async (request, response) => {
     const obj = {
         productName,
         categoryName,
-        subCategoryName,
         subCategoryId,
         productPrice,
+        finalPrice,
         productDescription,
+        productRating,
+        ratingCount,
         productColor,
         productImage,
         status,
@@ -48,33 +52,33 @@ exports.addProduct = async (request, response) => {
         const finalRes = await productModel(obj)
         try {
             const insertData = await finalRes.save()
-            resObj={
+            resObj = {
                 status: 1,
                 message: "! data inserted !",
                 data: insertData
             }
         }
         catch (error) {
-            resObj={
+            resObj = {
                 status: 0,
                 message: "! fill all fields !",
-                data: error
+                error
             }
         }
     }
     else {
         try {
             await productModel.updateOne({ _id: new ObjectId(URLId) }, { $set: obj })
-            resObj={
+            resObj = {
                 status: 1,
                 message: "! data updated successfully !"
             }
         }
         catch (error) {
-            resObj={
+            resObj = {
                 status: 0,
                 message: "! data updation unsuccessfull !",
-                data: error
+                error
             }
         }
     }
@@ -85,8 +89,8 @@ exports.viewProduct = async (request, response) => {
     let resObj
     try {
         const allData = await productModel.find().populate("subCategoryId")
-        const productImageLink = "http://localhost:1323/Uploads/Products"
-        resObj={
+        const productImageLink = "http://localhost:1323/Uploads/Products/"
+        resObj = {
             status: 1,
             message: "! data found !",
             productImageLink,
@@ -94,10 +98,10 @@ exports.viewProduct = async (request, response) => {
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -112,37 +116,37 @@ exports.deleteProduct = async (request, response) => {
             const imagePath = `Uploads/Products/${productData.productImage}`
             await fs.unlink(imagePath);
         }
-        resObj={
+        resObj = {
             status: 1,
             message: "! data deleted !"
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data deletion unsuccessfull !",
-            data: error
+            error
         }
     }
     response.send(resObj)
 }
 
-exports.editProduct=async(request,response)=>{
+exports.editProduct = async (request, response) => {
     const URLId = request.params.id
     let resObj
     try {
         const productData = await productModel.findOne({ _id: new ObjectId(URLId) })
-        resObj={
+        resObj = {
             status: 1,
             message: "! data found !",
             data: productData
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)

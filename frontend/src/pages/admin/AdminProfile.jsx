@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import Header from '../../common/admin/Header'
 import Sidebar from '../../common/admin/Sidebar'
-import { adminContext } from '../../Context/MainContext'
+import { myntraContext } from '../../Context/MainContext'
 import Location from '../../common/admin/Location'
 import avatar from "../../images/avatar.png"
 
 export function AdminProfile() {
-  const { sideBar } = useContext(adminContext)
+  const { sideBar } = useContext(myntraContext)
   return (
     <div>
       <Header />
@@ -17,7 +17,7 @@ export function AdminProfile() {
           <div className='p-4'>
             <div className='background_admin p-[2px] rounded-lg grid grid-cols-[30%_auto]'>
               <div className='bg-[white] me-[1px] rounded-lg p-4'>
-                <img src={avatar} className='w-3/4 mx-auto' />
+                <img src={avatar} alt='' className='w-3/4 mx-auto' />
               </div>
               <div className='bg-[white] ms-[1px] rounded-lg p-4'>
                 <form className=''>

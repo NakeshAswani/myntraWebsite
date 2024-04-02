@@ -7,7 +7,7 @@ const webCategoryRoutes=express.Router();
 
 // using webCategoryRoutes variable to create routes
 webCategoryRoutes.get("/view-category",viewCategory)
-webCategoryRoutes.get("/view-sub-category",viewSubCategory)
+webCategoryRoutes.get("/view-sub-category/:id?",viewSubCategory)
 
 // exporting webCategoryRoutes variable
 module.exports=webCategoryRoutes;

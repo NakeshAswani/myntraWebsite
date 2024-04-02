@@ -49,7 +49,7 @@ exports.addCategory = async (request, response) => {
             resObj = {
                 status: 0,
                 message: "! fill all fields !",
-                data: error
+                error
             }
         }
     }
@@ -65,7 +65,7 @@ exports.addCategory = async (request, response) => {
             resObj = {
                 status: 0,
                 message: "! data updation unsuccessfull !",
-                data: error
+                error
             }
         }
     }
@@ -76,7 +76,7 @@ exports.viewCategory = async (request, response) => {
     let resObj
     try {
         const allData = await categoryModel.find()
-        const categoryImageLink = "http://localhost:1323/Uploads/Category"
+        const categoryImageLink = "http://localhost:1323/Uploads/Category/"
         resObj = {
             status: 1,
             message: "! data found !",
@@ -88,7 +88,7 @@ exports.viewCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -112,7 +112,7 @@ exports.deleteCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data deletion unsuccessfull !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -133,7 +133,7 @@ exports.editCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -143,7 +143,6 @@ exports.editCategory = async (request, response) => {
 // subCategory functions start
 exports.addSubCategory = async (request, response) => {
     const subCategoryName = request.body.subCategoryName
-    const categoryName = request.body.categoryName
     const categoryId = request.body.categoryId
     const subCategoryDescription = request.body.subCategoryDescription
     let subCategoryImage
@@ -168,7 +167,6 @@ exports.addSubCategory = async (request, response) => {
     }
     const obj = {
         subCategoryName,
-        categoryName,
         categoryId,
         subCategoryDescription,
         subCategoryImage,
@@ -189,7 +187,7 @@ exports.addSubCategory = async (request, response) => {
             resObj = {
                 status: 0,
                 message: "! fill all fields !",
-                data: error
+                error
             }
         }
     }
@@ -205,7 +203,7 @@ exports.addSubCategory = async (request, response) => {
             resObj = {
                 status: 0,
                 message: "! data updation unsuccessfull !",
-                data: error
+                error
             }
         }
     }
@@ -216,7 +214,7 @@ exports.viewSubCategory = async (request, response) => {
     let resObj
     try {
         const allData = await subCategoryModel.find().populate("categoryId")
-        const subCategoryImageLink = "http://localhost:1323/Uploads/SubCategory"
+        const subCategoryImageLink = "http://localhost:1323/Uploads/SubCategory/"
         resObj = {
             status: 1,
             message: "! data found !",
@@ -228,7 +226,7 @@ exports.viewSubCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -252,7 +250,7 @@ exports.deleteSubCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! id not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
@@ -273,7 +271,7 @@ exports.editSubCategory = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)

@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../css/index.css';
 import { Header } from '../../common/web/Header'
-import loginimage from "../../images/loginimage.webp";
 
 export function ChangePassword() {
     return (
@@ -13,10 +12,10 @@ export function ChangePassword() {
                     <div className='register_section w-[100%] py-[100px] px-[35px] bg-[white]'>
                         <p className='text-[19px] text-[#424552] font-[600]'>Reset Password</p>
 
-                        <p className='text-[12px] mt-[10px]'>Enter your email or mobile number and we’ll send a link on your <br/> email to reset your password.</p>
+                        <p className='text-[12px] mt-[10px]'>Enter your email or mobile number and we’ll send a link on your <br /> email to reset your password.</p>
 
                         <div className='flex register_number items-center border border-1 border-[grey] p-[7px] my-[20px]'>
-                            <input type="number" className='w-[100%] outline-none text-[14px]' inputMode="numeric" max="9999999999" min="6000000000" pattern="[0-9]+" placeholder="Mobile Number" />
+                            <input type="tel" className='w-[100%] outline-none text-[14px]' placeholder="Mobile Number" />
                         </div>
 
                         <button className='w-[100%] p-[8px] bg-color4 text-[white] font-[650] mb-[10px]'>SEND LINK</button>

@@ -7,11 +7,13 @@ const categorySchema = new Schema({
     categoryName: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        lowercase: true
     },
     categoryDescription: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true
     },
     categoryImage: {
         type: String,

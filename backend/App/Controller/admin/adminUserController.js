@@ -5,8 +5,8 @@ const userRegistrationModel = require("../../Model/userRegistrationModel")
 // Nodemailer function
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // Use `true` for port 465, `false` for all other ports
+    port: 465,
+    secure: true,
     auth: {
         user: "nakesh270704@gmail.com",
         pass: "cjglikzeyooccgtz",
@@ -28,37 +28,41 @@ exports.viewUser = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
 }
 
-exports.checkLogin = async (request, response) => {
+exports.checkLogin = (request, response) => {
     let resObj
     let originalUserName = "admin"
-    let originalPassword = "abc@123"
+    let originalPassword = "admin@123"
     let userName = request.body.userName
     let password = request.body.password
     const userAgent = request.useragent
     const deviceInfo = {
-        browser: userAgent.browser,
-        version: userAgent.version,
-        os: userAgent.os,
-        platform: userAgent.platform,
-        source: userAgent.source,
+        browser: userAgent?.browser || "Unknown",
+        version: userAgent?.version || "Unknown",
+        os: userAgent?.os || "Unknown",
+        platform: userAgent?.platform || "Unknown",
+        source: userAgent?.source || "Unknown",
     }
-    if (userName == originalUserName && password == originalPassword) {
-        const info = await transporter.sendMail({
-            from: 'information regarding login <nakesh270704@gmail.com>', // sender address
-            to: "nakeshaswani27@gmail.com", // list of receivers
-            subject: "login alert", // Subject line
-            text: `Hello,\n\nThis is to inform you that your account has been accessed from the following device:\n\nDevice Info: ${deviceInfo}\n\nIf this was not you, please take appropriate action.`, // plain text body
-        });
+    if (userName === originalUserName && password === originalPassword) {
         resObj = {
             status: 1,
             message: "! login successful !"
         }
+        transporter.sendMail({
+            from: 'information regarding login <nakesh270704@gmail.com>',
+            to: "nakeshaswani27@gmail.com",
+            subject: "login alert",
+            html: `Hello,\n\nThis is to inform you that your account has been accessed from the following device:\n\nDevice Info: <table border="1px">${Object.entries(deviceInfo).map(([keys, value]) => {
+                return(
+                    `<tr><th>${keys}</th><td>${value}</td></tr>`
+                )
+            })}</table>\n\nIf this was not you, please take appropriate action.`,
+        });
     }
     else {
         resObj = {

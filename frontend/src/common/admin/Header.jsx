@@ -11,7 +11,7 @@ export default function Header() {
       <div className=' container-fluid shadow-md '>
         <div className='flex items-center px-4 py-3'>
           <div className='flex items-center'>
-            <img src={logo_image} width={60} />
+            <img src={logo_image} alt='' width={60} />
             <div className='text-[20px] font-bold px-2'>Myntra</div>
           </div>
           <div className='ms-auto flex items-center'>

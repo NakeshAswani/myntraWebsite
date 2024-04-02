@@ -4,20 +4,24 @@ const orderModel = require("../../Model/orderModel")
 
 // order functions start
 exports.addOrder = async (request, response) => {
+    const productId = request.body.productId
     const productName = request.body.productName
     const categoryName = request.body.categoryName
     const subCategoryName = request.body.subCategoryName
-    const productPrice = request.body.productPrice
     const productColor = request.body.productColor
+    const productImage = request.body.productImage
+    const productPrice = request.body.productPrice
     const quantity = request.body.quantity
     const totalAmount = request.body.totalAmount
     const userId = request.body.userId
     const obj = {
+        productId,
         productName,
         categoryName,
         subCategoryName,
-        productPrice,
         productColor,
+        productImage,
+        productPrice,
         quantity,
         totalAmount,
         userId
@@ -28,15 +32,15 @@ exports.addOrder = async (request, response) => {
         const insertData = await finalRes.save()
         resObj = {
             status: 1,
-            message: "! data inserted !",
+            message: "! order placed !",
             data: insertData
         }
     }
     catch (error) {
         resObj = {
             status: 0,
-            message: "! data not inserted !",
-            data: error
+            message: "! order not placed try again !",
+            error
         }
     }
     response.send(resObj)
@@ -47,9 +51,11 @@ exports.viewOrder = async (request, response) => {
     let resObj
     try {
         const orderData = await orderModel.find({ userId: new ObjectId(userId) })
+        const orderImageLink = "http://localhost:1323/Uploads/Products/"
         resObj = {
             status: 1,
             message: "! data found !",
+            orderImageLink,
             data: orderData
         }
     }
@@ -57,7 +63,7 @@ exports.viewOrder = async (request, response) => {
         resObj = {
             status: 0,
             message: "! data not found !",
-            data: error
+            error
         }
     }
     response.send(resObj)
