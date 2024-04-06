@@ -1,11 +1,11 @@
 // importing the necessary packages and files
-const express=require("express");
+const express = require("express");
 const multer = require("multer")
 let path = require("path");
-const { addProduct, viewProduct, deleteProduct } = require("../../Controller/admin/adminProductController");
+const { addProduct, viewProduct, deleteProduct, editProduct } = require("../../Controller/admin/adminProductController");
 
 // creating a adminProductRoutes variable
-const adminProductRoutes=express.Router();
+const adminProductRoutes = express.Router();
 
 // multer image storage code
 const storage = multer.diskStorage({
@@ -20,9 +20,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage }).single('productImage');
 
 // using adminProductRoutes variable to create routes
-adminProductRoutes.post("/add-product/:id?",upload,addProduct);
-adminProductRoutes.get("/view-product",viewProduct);
-adminProductRoutes.post("/delete-product/:id",deleteProduct)
+adminProductRoutes.post("/add-product/:id?", upload, addProduct);
+adminProductRoutes.get("/view-product", viewProduct);
+adminProductRoutes.post("/delete-product/:id", deleteProduct)
+adminProductRoutes.get("/edit-product/:id", editProduct)
 
 // exporting adminProductRoutes variable
-module.exports=adminProductRoutes;
+module.exports = adminProductRoutes;

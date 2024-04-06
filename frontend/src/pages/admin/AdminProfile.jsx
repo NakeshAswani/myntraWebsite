@@ -22,39 +22,27 @@ export function AdminProfile() {
               <div className='bg-[white] ms-[1px] rounded-lg p-4'>
                 <form className=''>
                   <div className='mb-4'>
-                    <label className='block mb-2 font-semibold text-[red] text-[18px]'>Full Name *</label>
+                    <label className='block mb-2 font-semibold text-[red] text-[18px]'>User Name *</label>
                     <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="text" className='w-full bg-[white] rounded-md p-1' disabled />
+                      <input type="text" className='w-full bg-[white] rounded-md p-1' value={"admin"} disabled />
                     </div>
                   </div>
                   <div className='mb-4'>
                     <label className='block mb-2 font-semibold text-[red] text-[18px]'>Email *</label>
                     <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="email" className='w-full bg-[white] rounded-md p-1' disabled />
+                      <input type="email" className='w-full bg-[white] rounded-md p-1' value={"admin@gmail.com"} disabled />
                     </div>
                   </div>
                   <div className='mb-4'>
                     <label className='block mb-2 font-semibold text-[red] text-[18px]'>Phone *</label>
                     <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="number" className='w-full bg-[white] rounded-md p-1' disabled />
-                    </div>
-                  </div>
-                  <div className='mb-4'>
-                    <label className='block mb-2 font-semibold text-[red] text-[18px]'>Address *</label>
-                    <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="text" className='w-full bg-[white] rounded-md p-1' disabled />
-                    </div>
-                  </div>
-                  <div className='mb-4'>
-                    <label className='block mb-2 font-semibold text-[red] text-[18px]'>Pincode *</label>
-                    <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="text" className='w-full bg-[white] rounded-md p-1' disabled />
+                      <input type="tel" className='w-full bg-[white] rounded-md p-1' value={"1234567890"} disabled />
                     </div>
                   </div>
                   <div className='mb-4'>
                     <label className='block mb-2 font-semibold text-[red] text-[18px]'>Password *</label>
                     <div className='w-full rounded-md pb-[2px] background_admin'>
-                      <input type="password" className='w-full bg-[white] rounded-md p-1' disabled />
+                      <input type="password" className='w-full bg-[white] rounded-md p-1' value={"admin@123"} disabled />
                     </div>
                   </div>
                 </form>

@@ -36,14 +36,16 @@ export function Header() {
         console.error(error);
       })
     setApi(obj)
-    await axios.get(webBaseUrl + `cart/view-cart/${userDetails?._id}`)
-      .then((response) => response.data)
-      .then((finalResponse) => {
-        obj.cartData = finalResponse?.data
-      })
-      .catch(error => {
-        console.error(error)
-      })
+    if (userDetails) {
+      await axios.get(webBaseUrl + `cart/view-cart/${userDetails?._id}`)
+        .then((response) => response.data)
+        .then((finalResponse) => {
+          obj.cartData = finalResponse?.data
+        })
+        .catch(error => {
+          console.error(error)
+        })
+    }
   }
   useEffect(() => {
     getResponse()

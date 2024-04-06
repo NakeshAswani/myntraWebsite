@@ -18,7 +18,7 @@ export function Login() {
   const navigate = useNavigate()
   const formSubmit = async (event) => {
     event.preventDefault()
-    await axios.post(webBaseUrl + `user/check-user/?token=${token}`, formData)
+    await axios.post(webBaseUrl + "user/check-user", formData)
       .then((response) => response.data)
       .then((finalResponse) => {
         if (finalResponse?.status === 1) {

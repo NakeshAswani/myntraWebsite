@@ -108,13 +108,13 @@ export default function Sidebar() {
                     Sub-Category
                   </div>
                   <ul>
-                    <li className={`${(open.category && innerOpen.subCategory) ? "mt-[10px] ps-2 h-auto text-[16px] font-semibold scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] font-normal scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
+                    <li className={`${(open.category && innerOpen.subCategory) ? "mt-[10px] ps-2 h-auto text-[14px] font-semibold scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] font-normal scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
                       <Link to={"/admin/category/add-sub-category"} className={`grid grid-cols-[30px_auto] gap-1 items-center`}>
                         <FontAwesomeIcon icon={faAnglesRight} className='w-full' />
                         Add Sub-Category
                       </Link>
                     </li>
-                    <li className={`${(open.category && innerOpen.subCategory) ? "mt-[10px] ps-2 h-auto text-[16px] font-semibold scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] font-normal scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
+                    <li className={`${(open.category && innerOpen.subCategory) ? "mt-[10px] ps-2 h-auto text-[14px] font-semibold scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] font-normal scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
                       <Link to={"/admin/category/view-sub-category"} className={`grid grid-cols-[30px_auto] gap-1 items-center`}>
                         <FontAwesomeIcon icon={faAnglesRight} className='w-full' />
                         View Sub-Category

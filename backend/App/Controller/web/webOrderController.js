@@ -68,4 +68,25 @@ exports.viewOrder = async (request, response) => {
     }
     response.send(resObj)
 }
+
+exports.deleteOrder = async (request, response) => {
+    const userId = request.params.userId
+    let resObj
+    try {
+        const deleteData = await orderModel.deleteMany({ userId: new ObjectId(userId) })
+        resObj = {
+            status: 1,
+            message: "! data deleted !",
+            data: deleteData
+        }
+    }
+    catch (error) {
+        resObj = {
+            status: 0,
+            message: "! data deletetion unsuccessfull !",
+            error
+        }
+    }
+    response.send(resObj)
+}
 // order functions end

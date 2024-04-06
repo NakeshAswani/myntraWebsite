@@ -36,10 +36,11 @@ exports.addUser = async (request, response) => {
         try {
             const finalRes = await userRegistrationModel(obj)
             const insertData = await finalRes.save()
+            const token = jwt.sign({ id: insertData._id }, tokenKey)
             resObj = {
                 status: 1,
                 message: "! data inserted !",
-                data: insertData
+                data: { insertData, token }
             }
         }
         catch (error) {
@@ -81,6 +82,7 @@ exports.addAddress = async (request, response) => {
             resObj = {
                 status: 1,
                 message: "! Address added successfully !",
+                data: user.Address[user.Address.length - 1]
             }
         }
         else {
@@ -207,12 +209,12 @@ exports.checkUser = async (request, response) => {
     try {
         const userData = await userRegistrationModel.findOne(obj)
         if (userData) {
-            await transporter.sendMail({
-                from: 'information regarding login <nakesh270704@gmail.com>',
-                to: userData.Email,
-                subject: "login alert",
-                text: `Hello,\n\nThis is to inform you that your account has been accessed from the following device:\n\nDevice Info: ${deviceInfo}\n\nIf this was not you, please take appropriate action or mail us and our technical team will reach you.`,
-            });
+            // await transporter.sendMail({
+            //     from: 'information regarding login <nakesh270704@gmail.com>',
+            //     to: userData.Email,
+            //     subject: "login alert",
+            //     text: `Hello,\n\nThis is to inform you that your account has been accessed from the following device:\n\nDevice Info: ${deviceInfo}\n\nIf this was not you, please take appropriate action or mail us and our technical team will reach you.`,
+            // });
             const token = jwt.sign({ id: userData._id }, tokenKey)
             resObj = {
                 status: 1,

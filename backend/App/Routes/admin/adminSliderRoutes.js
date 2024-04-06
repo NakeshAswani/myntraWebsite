@@ -2,7 +2,7 @@
 const express=require("express");
 const multer = require("multer")
 let path = require("path");
-const { addSlider, viewSlider, deleteSlider } = require("../../Controller/admin/adminSliderController");
+const { addSlider, viewSlider, deleteSlider, editSlider } = require("../../Controller/admin/adminSliderController");
 
 // creating a adminSliderRoutes variable
 const adminSliderRoutes=express.Router();
@@ -23,6 +23,7 @@ const upload = multer({ storage: storage }).single('sliderImage')
 adminSliderRoutes.post("/add-slider/:id?",upload,addSlider)
 adminSliderRoutes.get("/view-slider",viewSlider)
 adminSliderRoutes.post("/delete-slider/:id",deleteSlider)
+adminSliderRoutes.get("/edit-slider/:id", editSlider)
 
 // exporting adminSliderRoutes variable
 module.exports=adminSliderRoutes

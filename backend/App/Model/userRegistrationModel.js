@@ -10,6 +10,7 @@ const addressSchema = new Schema({
   },
   addressPhone: {
     type: String,
+    minLength: 10,
     required: true
   },
   Street: {
@@ -26,6 +27,7 @@ const addressSchema = new Schema({
   },
   Pincode: {
     type: Number,
+    minLength: 6,
     required: true
   },
   Type: {
@@ -46,6 +48,7 @@ const userRegistrationSchema = new Schema({
   },
   Phone: {
     type: String,
+    minLength: 10,
     required: true,
     unique: true
   },

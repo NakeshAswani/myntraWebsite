@@ -33,12 +33,12 @@ const uploadSubCatImg = multer({ storage: subCatStorage }).single('subCategoryIm
 adminCategoryRoutes.post("/add-category/:id?", uploadCatImg, addCategory)
 adminCategoryRoutes.get("/view-category", viewCategory)
 adminCategoryRoutes.post("/delete-category/:id", deleteCategory)
-adminCategoryRoutes.post("/edit-category/:id", editCategory)
+adminCategoryRoutes.get("/edit-category/:id", editCategory)
 // using adminCategoryRoutes variable to create routes of subCategory
 adminCategoryRoutes.post("/add-sub-category/:id?", uploadSubCatImg, addSubCategory)
 adminCategoryRoutes.get("/view-sub-category", viewSubCategory)
 adminCategoryRoutes.post("/delete-sub-category/:id", deleteSubCategory)
-adminCategoryRoutes.post("/edit-sub-category/:id", editSubCategory)
+adminCategoryRoutes.get("/edit-sub-category/:id", editSubCategory)
 
 // exporting adminCategoryRoutes variable
 module.exports = adminCategoryRoutes

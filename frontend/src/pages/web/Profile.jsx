@@ -48,17 +48,29 @@ export function Profile() {
   }
   const deleteUser = () => {
     if (window.confirm("Are You Sure You Want To Delete Account:")) {
-      axios.get(webBaseUrl + `user/delete-user/${userDetails?._id}`)
+      axios.post(webBaseUrl + `order/delete-order/${userDetails?._id}`)
         .then((response) => response.data)
         .then((finalResponse) => {
           if (finalResponse?.status === 1) {
-            setToken(null)
-            setUserDetails(null)
-            NotificationManager.success(finalResponse?.message, "", 1000);
+            axios.get(webBaseUrl + `user/delete-user/${userDetails?._id}`)
+              .then((innerResponse) => innerResponse.data)
+              .then((innerFinalResponse) => {
+                if (innerFinalResponse?.status === 1) {
+                  setToken(null)
+                  setUserDetails(null)
+                  NotificationManager.success(innerFinalResponse?.message, "", 1000);
+                }
+                else {
+                  NotificationManager.error(innerFinalResponse?.message, "", 1000);
+                }
+              })
+              .catch(error => {
+                console.error(error)
+              })
           }
-          else {
-            NotificationManager.error(finalResponse?.message, "", 1000);
-          }
+        })
+        .catch(error => {
+          console.error(error)
         })
     }
   }

@@ -56,7 +56,7 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/slider/add-slider",
+    path: "/admin/slider/add-slider/:id?",
     element: <AddSlider />,
   },
 
@@ -66,7 +66,7 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/category/add-category",
+    path: "/admin/category/add-category/:id?",
     element: <AddCategory />,
   },
 
@@ -76,7 +76,7 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/category/add-sub-category",
+    path: "/admin/category/add-sub-category/:id?",
     element: <AddSubcategory />,
   },
 
@@ -86,7 +86,7 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/product/add-product",
+    path: "/admin/product/add-product/:id?",
     element: <AddProduct />,
   },
 
@@ -96,7 +96,7 @@ let routes = createBrowserRouter([
   },
 
   {
-    path: "/admin/color/add-color",
+    path: "/admin/color/add-color/:id?",
     element: <AddColor />,
   },
 

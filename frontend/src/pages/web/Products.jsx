@@ -137,14 +137,14 @@ export default function Products() {
           </div>
           <div className='p-6'>
             <div className='pb-10'>
-              <div className='border-b mb-8 grid grid-cols-4 gap-x-16 gap-y-8'>
+              <div className='border-b mb-8 grid grid-cols-4 gap-x-16 gap-y-8 items-baseline'>
                 {
                   (api?.productData?.length >= 1)
                     ?
                     api?.productData?.map((items, index) => {
                       return (
                         <Link to={`/product/product-description/?productId=${items?._id}`} key={index}>
-                          <div>
+                          <div className=''>
                             <figure className='relative'>
                               <img src={api?.productImageLink + items?.productImage} alt='' />
                               <span className='absolute bottom-2 left-2 text-[12px] font-medium bg-[white] bg-opacity-60 px-1'>

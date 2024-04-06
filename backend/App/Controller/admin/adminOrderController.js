@@ -17,11 +17,13 @@ const transporter = nodemailer.createTransport({
 // order function start
 exports.viewOrder = async (request, response) => {
     let resObj
+    const orderImageLink = "http://localhost:1323/Uploads/Products/"
     try {
         const allData = await orderModel.find()
         resObj = {
             status: 1,
             message: "! data found !",
+            orderImageLink,
             data: allData
         }
     }

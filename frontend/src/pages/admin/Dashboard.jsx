@@ -20,22 +20,18 @@ export function Dashboard() {
     orderData: [],
   })
   const apiArray = ["category/view-category", "category/view-sub-category", "product/view-product", "color/view-color", "user/view-users", "order/view-orders"]
-  const getResponse = () => {
-    const obj = { ...api }
-    Object.keys(api).map((items, index) => {
-      for (let i = 0; i < apiArray?.length; i++) {
-        const item = apiArray[i]
-        if (index === i) {
-          axios.get(adminBaseUrl + item)
-            .then((response) => response.data)
-            .then((finalResponse) => {
-              obj[items] = finalResponse?.data
-              setApi(obj)
-            })
-        }
-      }
-    })
-  }
+  const getResponse = async () => {
+    const obj = { ...api };
+    const requests = apiArray.map((item, index) =>
+      axios.get(adminBaseUrl + item).then((response) => response.data.data)
+    );
+    const responses = await Promise.all(requests);
+    responses.forEach((finalResponse, index) => {
+      const items = Object.keys(api)[index];
+      obj[items] = finalResponse;
+    });
+    setApi(obj);
+  };
   useEffect(() => {
     getResponse()
   }, [])

@@ -18,14 +18,14 @@ exports.addColor = async (request, response) => {
         const finalRes = await colorModel(obj)
         try {
             const insertData = await finalRes.save()
-            resObj={
+            resObj = {
                 status: 1,
                 message: "! data inserted !",
                 data: insertData
             }
         }
         catch (error) {
-            resObj={
+            resObj = {
                 status: 0,
                 message: "! fill all fields !",
                 error
@@ -35,13 +35,13 @@ exports.addColor = async (request, response) => {
     else {
         try {
             await colorModel.updateOne({ _id: new ObjectId(URLId) }, { $set: obj })
-            resObj={
+            resObj = {
                 status: 1,
                 message: "! data updated successfully !"
             }
         }
         catch (error) {
-            resObj={
+            resObj = {
                 status: 0,
                 message: "! data updation unsuccessfull !",
                 error
@@ -55,14 +55,14 @@ exports.viewColor = async (request, response) => {
     let resObj
     try {
         const allData = await colorModel.find()
-        resObj={
+        resObj = {
             status: 1,
             message: "! data found !",
             data: allData
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data not found !",
             error
@@ -76,13 +76,13 @@ exports.deleteColor = async (request, response) => {
     let resObj
     try {
         await colorModel.deleteOne({ _id: new ObjectId(deleteId) });
-        resObj={
+        resObj = {
             status: 1,
             message: "! data deleted !"
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data deletion unsuccessfull !",
             error
@@ -91,19 +91,19 @@ exports.deleteColor = async (request, response) => {
     response.send(resObj)
 }
 
-exports.editColor=async(request,response)=>{
+exports.editColor = async (request, response) => {
     const URLId = request.params.id
     let resObj
     try {
         const colorData = await colorModel.findOne({ _id: new ObjectId(URLId) })
-        resObj={
+        resObj = {
             status: 1,
             message: "! data found !",
             data: colorData
         }
     }
     catch (error) {
-        resObj={
+        resObj = {
             status: 0,
             message: "! data not found !",
             error

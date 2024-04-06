@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../../css/index.css';
 import { Header } from '../../common/web/Header'
 import loginimage from "../../images/loginimage.webp";
@@ -7,8 +7,10 @@ import axios from 'axios';
 import webBaseUrl from '../../common/web/WebBaseUrl';
 import 'react-notifications/lib/notifications.css';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { myntraContext } from '../../Context/MainContext';
 
 export function Register() {
+  const { setUserDetails, setToken } = useContext(myntraContext)
   const [formData, setFormData] = useState({
     fullName: "",
     Email: "",
@@ -33,10 +35,12 @@ export function Register() {
             Phone: "",
             Password: ""
           })
+          setUserDetails(finalResponse?.data?.insertData)
+          setToken(finalResponse?.data?.token)
           NotificationManager.success(finalResponse?.message, "", 1000);
           setTimeout(() => {
-            navigate("/login")
-          }, 2000)
+            navigate("/")
+          }, 1100)
         }
         else {
           NotificationManager.error(finalResponse?.message, "", 1000);

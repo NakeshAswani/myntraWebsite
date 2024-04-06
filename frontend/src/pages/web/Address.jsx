@@ -107,7 +107,22 @@ export function Address() {
         .then((response) => response.data)
         .then((finalResponse) => {
           if (finalResponse?.status === 1) {
+            if (!userDetails?.Address?.length >= 1) {
+              setSelectedAddressId(finalResponse?.data?._id)
+            }
             NotificationManager.success(finalResponse?.message, "", 1000);
+            setFormData({
+              Address: {
+                addressName: "",
+                addressPhone: "",
+                Street: "",
+                City: "",
+                State: "",
+                Pincode: "",
+                Type: ""
+              }
+            })
+            setAddAddress(false)
           }
           else {
             NotificationManager.error(finalResponse?.message, "", 1000);
@@ -116,18 +131,6 @@ export function Address() {
         .catch(error => {
           console.error(error)
         })
-      setFormData({
-        Address: {
-          addressName: "",
-          addressPhone: "",
-          Street: "",
-          City: "",
-          State: "",
-          Pincode: "",
-          Type: ""
-        }
-      })
-      setAddAddress(false)
     }
     await axios.get(webBaseUrl + `user/view-user/${userDetails?._id}/?token=${token}`)
       .then((response) => response.data)
