@@ -19,7 +19,7 @@ server.use("/Uploads/Slider", express.static("Uploads/Slider"));
 server.use("/Uploads/SubCategory", express.static("Uploads/SubCategory"));
 
 // connecting mongoose database named myntra
-mongoose.connect('mongodb://127.0.0.1:27017/myntra')
+mongoose.connect('mongodb://127.0.0.1:27017/myntra') // 'mongodb://192.168.29.128:27017/myntra'
   .then(() => {
     server.listen("1323");
     console.log('Connected!');
