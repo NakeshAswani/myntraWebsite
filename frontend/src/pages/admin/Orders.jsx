@@ -49,10 +49,10 @@ export function Orders() {
         <Header />
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
-          <div className='w-full'>
-            <Location />
+          <div className='w-full font-mono'>
+            {/* <Location /> */}
             <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>View Order</h1>
+              <h1 className='w-max text-4xl font-bold mb-6 text-[white] leading-[2.8rem]'>View Order</h1>
               <div className='grid grid-cols-2 gap-3'>
                 {
                   (api?.orderData?.length >= 1)

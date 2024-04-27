@@ -150,25 +150,25 @@ export function AddProduct() {
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
-            <Location />
-            <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>Add Product</h1>
+            {/* <Location /> */}
+            <div className='p-4 font-mono'>
+              <h1 className='w-max text-4xl font-bold mb-6 text-[white] leading-[2.8rem]'>Add Product</h1>
               <form className='w-8/12' onSubmit={addProduct}>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Name <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Name <span className='text-[red]'>*</span></label>
+                  <div className='w-full bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.productName} name='productName' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Category Name <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Category Name <span className='text-[red]'>*</span></label>
+                  <div className='w-full bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryName} name='categoryName' onChange={changeValue} />
                   </div>
                 </div>
-                <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Sub Category Id <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                <div className='mb-6 '>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Sub Category Id <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <select className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.subCategoryId} name='subCategoryId' onChange={changeValue}>
                       <option value={""}>Select Sub Category Id (Category Name: Sub Category Name)</option>
                       {
@@ -187,39 +187,39 @@ export function AddProduct() {
                     </select>
                   </div>
                 </div>
-                <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Price <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                <div className='mb-6 '>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Price <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.productPrice} name='productPrice' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Final Price <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Final Price <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.finalPrice} name='finalPrice' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Description <span className='text-[red]'>*</span></label>
-                  <div className='w-full h-[120px] bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Description <span className='text-[red]'>*</span></label>
+                  <div className='w-full h-[120px]  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <textarea className='w-full h-full bg-[white] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.productDescription} name='productDescription' onChange={changeValue}></textarea>
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Rating <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Rating <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.productRating} name='productRating' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Rating Count <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Rating Count <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' placeholder={"example: 10.5k"} value={formData?.ratingCount} name='ratingCount' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Color <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Color <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <select className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.productColor} name='productColor' onChange={changeValue}>
                       <option value={""}>Select Color Name</option>
                       {
@@ -239,20 +239,20 @@ export function AddProduct() {
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Image <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Product Image <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
                     <input type="file" className='file_upload w-full bg-[white] rounded-md p-1' name='productImage' />
                   </div>
                 </div>
-                <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Product Status <span className='text-[red]'>*</span></label>
+                <div className='mb-6 text-[white]'>
+                  <label className='block text-[18px] font-medium mb-1 '>Product Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                     <input type="radio" name='status' value={1} checked={formData.status == 1 ? true : false} onChange={changeValue} className='me-1' />Active<br />
                     <input type="radio" name='status' value={0} checked={formData.status == 0 ? true : false} onChange={changeValue} className='me-1' />De-Active
                   </div>
                 </div>
-                <div className='mb-6'>
-                  <button className='py-2 px-4 font-semibold border border-[black] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
+                <div className='mb-6 text-[white]'>
+                  <button className='py-2 px-4 font-semibold border border-[white] rounded-lg hover: hover:text-[white]'>Submit</button>
                 </div>
               </form>
             </div>

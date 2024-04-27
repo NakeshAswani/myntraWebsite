@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background-color: #2f3036;
+}
 
 .categories_inner:hover{
     transition: 0.8s;
@@ -72,9 +75,11 @@
     appearance: none;
 }
 
+
+
 /* Admin login page */
 .background_admin{
-    background: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
+    background:linear-gradient( #000a41,skyblue);
 }
 .sideBarOpenClose>:first-child{
     right: 0px;
@@ -103,3 +108,5 @@
     transform: translateY(-50%);
 }
 /* Admin login page */
+
+
