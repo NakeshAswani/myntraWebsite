@@ -132,7 +132,9 @@ export function Orders() {
                       )
                     })
                     :
-                    ""
+                    <article className='text-[white] text-[20px]'>
+                      ! No Orders Yet !
+                    </article>
                 }
               </div>
             </div>

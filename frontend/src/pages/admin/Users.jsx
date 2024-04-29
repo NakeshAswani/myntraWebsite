@@ -96,7 +96,9 @@ export function Users() {
                       )
                     })
                     :
-                    ""
+                    <article className='text-[white] text-[20px]'>
+                      ! No Users Yet !
+                    </article>
                 }
               </div>
             </div>

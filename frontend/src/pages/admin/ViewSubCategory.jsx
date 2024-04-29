@@ -87,7 +87,7 @@ export function ViewSubCategory() {
                       })
                       :
                       <tr>
-                        <td className='border p-2 text-center'>! No Data Found !</td>
+                        <td className='border p-2 text-center' colSpan={6}>! No Data Found !</td>
                       </tr>
                   }
                 </tbody>

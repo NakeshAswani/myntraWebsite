@@ -123,7 +123,9 @@ export function ViewProduct() {
                       )
                     })
                     :
-                    ""
+                    <article className='text-[20px]'>
+                      ! No Products Inserted Yet !
+                    </article>
                 }
               </div>
             </div>

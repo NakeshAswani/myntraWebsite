@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #2f3036;
-}
-
 .categories_inner:hover{
     transition: 0.8s;
     --tw-border-opacity: 1;

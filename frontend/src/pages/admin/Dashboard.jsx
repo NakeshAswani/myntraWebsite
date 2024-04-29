@@ -51,8 +51,8 @@ export function Dashboard() {
                 </div>
                 <div className=' rounded-md py-2 font-medium'>
                   <p className='text-[17px] font-[650]'>Categories Uploaded</p>
-                  Main Category: {api?.categoryData?.length > 0 ? api?.categoryData?.length : ""}<br />
-                  Sub Category: {api?.subCategoryData?.length > 0 ? api?.subCategoryData?.length : ""}
+                  Main Category: {api?.categoryData?.length > 0 ? api?.categoryData?.length : "0"}<br />
+                  Sub Category: {api?.subCategoryData?.length > 0 ? api?.subCategoryData?.length : "0"}
                 </div>
               </div>
               <div className='category_showing bg-gradient-to-tr from-[#cecece] w-[270px] to-[#c0dadb] p-[2px] rounded-lg grid grid-cols-[30%_auto] gap-[2px]'>
@@ -61,7 +61,7 @@ export function Dashboard() {
                 </div>
                 <div className=' rounded-md p-2 font-medium'>
                 <p className='text-[17px] font-[650]'>Products Uploaded</p>
-                  Product: {api?.productData?.length > 0 ? api?.productData?.length : ""}
+                  Product: {api?.productData?.length > 0 ? api?.productData?.length : "0"}
                 </div>
               </div>
               <div className='category_showing bg-gradient-to-tr from-[#cecece] w-[270px] to-[#c0dadb] p-[2px] rounded-lg grid grid-cols-[30%_auto] gap-[2px]'>
@@ -70,7 +70,7 @@ export function Dashboard() {
                 </div>
                 <div className=' rounded-md p-2 font-medium'>
                 <p className='text-[17px] font-[650]'>Colors Uploaded</p>
-                  Colors: {api?.colorData?.length > 0 ? api?.colorData?.length : ""}
+                  Colors: {api?.colorData?.length > 0 ? api?.colorData?.length : "0"}
                 </div>
               </div>
               <div className='category_showing bg-gradient-to-tr from-[#cecece] w-[270px] to-[#c0dadb] p-[2px] rounded-lg grid grid-cols-[30%_auto] gap-[2px]'>
@@ -79,7 +79,7 @@ export function Dashboard() {
                 </div>
                 <div className=' rounded-md p-2 font-medium'>
                 <p className='text-[17px] font-[650]'>Logined Users</p>
-                  Users: {api?.userData?.length > 0 ? api?.userData?.length : ""}
+                  Users: {api?.userData?.length > 0 ? api?.userData?.length : "0"}
                 </div>
               </div>
               <div className='category_showing bg-gradient-to-tr from-[#cecece] w-[270px] to-[#c0dadb] p-[2px] rounded-lg grid grid-cols-[30%_auto] gap-[2px]'>
@@ -88,7 +88,7 @@ export function Dashboard() {
                 </div>
                 <div className=' rounded-md p-2 font-medium'>
                 <p className='text-[17px] font-[650]'>All Orders</p>
-                  Orders: {api?.orderData?.length > 0 ? api?.orderData?.length : ""}
+                  Orders: {api?.orderData?.length > 0 ? api?.orderData?.length : "0"}
                 </div>
               </div>
             </div>

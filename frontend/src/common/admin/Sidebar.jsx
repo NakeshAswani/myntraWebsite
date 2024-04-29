@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft, faAngleRight, faAnglesRight, faCopyright, faLaptop, faPalette, faShoppingCart, faSliders, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faAnglesRight, faCopyright, faLaptop, faPalette, faShippingFast, faShoppingCart, faSliders, faUsers } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { myntraContext } from '../../Context/MainContext';
 import { faProductHunt } from '@fortawesome/free-brands-svg-icons';
-import { FaShippingFast } from 'react-icons/fa';
 
 export default function Sidebar() {
   let { sideBar, setSideBar } = useContext(myntraContext)
@@ -147,7 +146,7 @@ export default function Sidebar() {
             <li className='my-[15px] font-mono'>
               <Link to={'#'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`} onClick={() => mainOpen("color")}>
                 <FontAwesomeIcon icon={faPalette} className='w-full' />
-                {(sideBar) ? "Colours" : ""}
+                {(sideBar) ? "Colors" : ""}
               </Link>
               <ul className='font-mono'>
                 <li className={`${(open.color) ? "mt-[10px] ps-2 h-auto text-[auto] scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
@@ -172,7 +171,7 @@ export default function Sidebar() {
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'/admin/orders'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`}>
-                <FaShippingFast className='w-full' />
+                <FontAwesomeIcon icon={faShippingFast} className='w-full' />
                 {(sideBar) ? "Orders" : ""}
               </Link>
             </li>
