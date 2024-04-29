@@ -39,7 +39,7 @@ export function ViewColor() {
           <Sidebar />
           <div className='w-full'>
             {/* <Location /> */}
-            <div className='p-4 text-[white] font-mono'>
+            <div className='p-4 font-mono'>
               <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem]'>View Color</h1>
               <table className='w-full table border'>
                 <thead>

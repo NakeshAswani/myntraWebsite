@@ -103,29 +103,29 @@ export function AddColor() {
           <div className='w-full'>
             {/* <Location /> */}
             <div className='p-4 font-mono'>
-              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem] text-[white]'>Add Color</h1>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem] '>Add Color</h1>
               <form className='w-8/12' onSubmit={addColor}>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Color Name <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Color Name <span className='text-[red]'>*</span></label>
                   <div className='w-full bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.colorName} name='colorName' onChange={changeValue} />
+                    <input type="text" className='w-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.colorName} name='colorName' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Color Description <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Color Description <span className='text-[red]'>*</span></label>
                   <div className='w-full h-[120px] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <textarea className='w-full h-full bg-[white] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.colorDescription} name='colorDescription' onChange={changeValue}></textarea>
+                    <textarea className='w-full h-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.colorDescription} name='colorDescription' onChange={changeValue}></textarea>
                   </div>
                 </div>
-                <div className='mb-6 text-[white]'>
+                <div className='mb-6 '>
                   <label className='block text-[18px] font-medium mb-1 '>Color Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                       <input type="radio" name='status' value={1} checked={formData.status == 1 ? true : false} onChange={changeValue} className='me-1' />Active<br />
                       <input type="radio" name='status' value={0} checked={formData.status == 0 ? true : false} onChange={changeValue} className='me-1' />De-Active
                     </div>
                 </div>
-                <div className='mb-6 text-[white]'>
-                  <button className='py-2 px-4 font-semibold border border-[white] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
+                <div className='mb-6 '>
+                  <button className='py-2 px-4 font-semibold border border-[black]  rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
                 </div>
               </form>
             </div>

@@ -120,18 +120,18 @@ export function AddSubcategory() {
           <div className='w-full'>
             {/* <Location /> */}
             <div className='p-4 font-mono'>
-              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem] text-[white]'>Add Sub Category</h1>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem] '>Add Sub Category</h1>
               <form className='w-8/12' onSubmit={addSubCategory}>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Sub Category Name <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Name <span className='text-[red]'>*</span></label>
                   <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.subCategoryName} name='subCategoryName' onChange={changeValue} />
+                    <input type="text" className='w-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.subCategoryName} name='subCategoryName' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Category Id <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Category Id <span className='text-[red]'>*</span></label>
                   <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <select className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryId} name='categoryId' onChange={changeValue}>
+                    <select className='w-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryId} name='categoryId' onChange={changeValue}>
                       <option value={""}>Select Category Id (Category Name)</option>
                       {
                         (categoryData?.length >= 1)
@@ -150,26 +150,26 @@ export function AddSubcategory() {
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Sub Category Description <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Description <span className='text-[red]'>*</span></label>
                   <div className='w-full h-[120px]  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <textarea className='w-full h-full bg-[white] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.subCategoryDescription} name='subCategoryDescription' onChange={changeValue}></textarea>
+                    <textarea className='w-full h-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.subCategoryDescription} name='subCategoryDescription' onChange={changeValue}></textarea>
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Sub Category Image <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Image <span className='text-[red]'>*</span></label>
                   <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="file" className='file_upload w-full bg-[white] rounded-md p-1' name='subCategoryImage' />
+                    <input type="file" className='file_upload w-full border border-1 border-[black] rounded-md p-[7px]' name='subCategoryImage' />
                   </div>
                 </div>
-                <div className='mb-6 text-[white]'>
+                <div className='mb-6 '>
                   <label className='block text-[18px] font-medium mb-1 '>Sub Category Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                     <input type="radio" name='status' value={1} checked={formData.status == 1 ? true : false} onChange={changeValue} className='me-1' />Active<br />
                     <input type="radio" name='status' value={0} checked={formData.status == 0 ? true : false} onChange={changeValue} className='me-1' />De-Active
                   </div>
                 </div>
-                <div className='mb-6 text-[white]'>
-                  <button className='py-2 px-4 font-semibold border border-[white] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
+                <div className='mb-6'>
+                  <button className='py-2 px-4 font-semibold border border-[black] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
                 </div>
               </form>
             </div>

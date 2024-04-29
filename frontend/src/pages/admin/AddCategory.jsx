@@ -109,27 +109,27 @@ export function AddCategory() {
           <div className='w-full '>
             {/* <Location /> */}
             <div className='p-4 font-mono'>
-              <h1 className='w-max text-4xl font-bold mb-6   leading-[2.8rem] text-[white]'>Add Category</h1>
+              <h1 className='w-max text-4xl font-bold mb-6   leading-[2.8rem] '>Add Category</h1>
               <form className='w-8/12' onSubmit={addCategory}>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white] '>Category Name <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1  '>Category Name <span className='text-[red]'>*</span></label>
                   <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryName} name='categoryName' onChange={changeValue} />
+                    <input type="text" className='w-full  border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryName} name='categoryName' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6 ' >
-                  <label className='block text-[18px] font-medium mb-1 text-[white] '>Category Description <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1  '>Category Description <span className='text-[red]'>*</span></label>
                   <div className='w-full h-[120px]  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <textarea className='w-full h-full bg-[white] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.categoryDescription} name='categoryDescription' onChange={changeValue}></textarea>
+                    <textarea className='w-full h-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.categoryDescription} name='categoryDescription' onChange={changeValue}></textarea>
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1 text-[white]'>Category Image <span className='text-[red]'>*</span></label>
+                  <label className='block text-[18px] font-medium mb-1 '>Category Image <span className='text-[red]'>*</span></label>
                   <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="file" className='file_upload w-full bg-[white] rounded-md p-1' name='categoryImage' />
+                    <input type="file" className='file_upload w-full border border-1 border-[black] rounded-md p-[8px]' name='categoryImage' />
                   </div>
                 </div>
-                <div className='mb-6 text-[white]'>
+                <div className='mb-6 '>
                   <label className='block text-[18px] font-medium mb-1 '>Category Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                     <div className='text-[18px]'>
@@ -138,8 +138,8 @@ export function AddCategory() {
                     </div>
                   </div>
                 </div>
-                <div className='mb-6 text-[white]'>
-                  <button className='py-2 px-4 font-semibold border border-[white] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
+                <div className='mb-6 '>
+                  <button className='py-2 px-4 font-semibold border border-[black] rounded-lg hover:bg-[black] hover:text-[white]'>Submit</button>
                 </div>
               </form>
             </div>

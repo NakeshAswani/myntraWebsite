@@ -8,7 +8,7 @@ import profile from "../../images/pngtree-user-vector-avatar-png-image_1541962-r
 
 export default function Header() {
   return (
-    <header className=' bg-gradient-to-r from-[#000a41] to-[#68b8d8]  h-[84px] fixed w-full z-[999]'>
+    <header className=' bg-[white]  h-[84px] fixed w-full z-[999]'>
       <div className=' container-fluid shadow-md '>
         <div className='flex items-center px-4 py-3'>
 

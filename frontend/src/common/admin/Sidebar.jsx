@@ -36,25 +36,29 @@ export default function Sidebar() {
   };
   return (
     <div>
-      <div className={`${(sideBar) ? 'w-[200px] shadow-md' : 'w-[100px] shadow-md'} fixed h-[calc(100vh - 84px)] p-[10px] transition-[0.8s] bg-[black]  text-[white] h-full sideBarOpenClose`}>
+      <div className={`${(sideBar) ? 'w-[200px] shadow-md' : 'w-[100px] shadow-md'} fixed h-[calc(100vh - 84px)]  transition-[0.8s] bg-[black]  text-[white] h-full sideBarOpenClose`}>
         <div className='absolute top-[281px] text-[black] text-[18px] transition-[0.5s] cursor-pointer' onClick={() => {
           changeData()
           mainOpen()
           openInside()
         }}>
-          <FontAwesomeIcon icon={(sideBar) ? faAngleLeft : faAngleRight} className='text-[white]' />
+          
+          
         </div>
         <div className='w-full '>
-          <ul>
+          <ul className='sidebar_ul_li'>
             <li className='my-[15px] font-mono'>
               <Link to={'/admin/dashboard'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`}>
-                <FontAwesomeIcon icon={faLaptop} className='w-full' />
+                {/* <FontAwesomeIcon icon={faLaptop} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
                 {(sideBar) ? "Dashboard" : ""}
+
               </Link>
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'#'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`} onClick={() => mainOpen("slider")}>
-                <FontAwesomeIcon icon={faSliders} className='w-full' />
+                {/* <FontAwesomeIcon icon={faSliders} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
                 {(sideBar) ? "Sliders" : ""}
               </Link>
               <ul className='font-mono'>
@@ -77,7 +81,8 @@ export default function Sidebar() {
                 mainOpen("category")
                 openInside()
               }}>
-                <FontAwesomeIcon icon={faCopyright} className='w-full' />
+                {/* <FontAwesomeIcon icon={faCopyright} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
                 {(sideBar) ? "Categories" : ""}
               </Link>
               <ul className='font-mono'>
@@ -125,7 +130,8 @@ export default function Sidebar() {
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'#'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`} onClick={() => mainOpen("product")}>
-                <FontAwesomeIcon icon={faProductHunt} className='w-full' />
+                {/* <FontAwesomeIcon icon={faProductHunt} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
                 {(sideBar) ? "Products" : ""}
               </Link>
               <ul className='font-mono'>
@@ -145,13 +151,17 @@ export default function Sidebar() {
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'#'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`} onClick={() => mainOpen("color")}>
-                <FontAwesomeIcon icon={faPalette} className='w-full' />
-                {(sideBar) ? "Colors" : ""}
+
+                {/* <FontAwesomeIcon icon={faPalette} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
+                {(sideBar) ? "Colours" : ""}
+              
               </Link>
               <ul className='font-mono'>
                 <li className={`${(open.color) ? "mt-[10px] ps-2 h-auto text-[auto] scale-y-100" : "mt-[0px] ps-0 h-0 text-[0] scale-y-0"} origin-top`} style={{ transition: "0.5s" }}>
                   <Link to={"/admin/color/add-color"} className={`grid grid-cols-[30px_auto] gap-1 items-center font-semibold`}>
                     <FontAwesomeIcon icon={faAngleRight} className='w-full' />
+                    
                     Add Color
                   </Link>
                 </li>
@@ -165,14 +175,18 @@ export default function Sidebar() {
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'/admin/users'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`}>
-                <FontAwesomeIcon icon={faUsers} className='w-full' />
+                {/* <FontAwesomeIcon icon={faUsers} className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
                 {(sideBar) ? "Users" : ""}
               </Link>
             </li>
             <li className='my-[15px] font-mono'>
               <Link to={'/admin/orders'} className={`font-semibold grid ${(sideBar) ? "grid-cols-[30px_auto] text-[18px] text-left" : "text-[30px] text-center"} gap-1 items-center`}>
-                <FontAwesomeIcon icon={faShippingFast} className='w-full' />
+                {/* <FaShippingFast className='w-full' /> */}
+                <FontAwesomeIcon icon={ faAngleRight} />
+                {/* <FontAwesomeIcon icon={faShippingFast} className='w-full' /> */}
                 {(sideBar) ? "Orders" : ""}
+                
               </Link>
             </li>
           </ul>
