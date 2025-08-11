@@ -49,10 +49,10 @@ export function Orders() {
         <Header />
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
-          <div className='w-full'>
-            <Location />
+          <div className='w-full font-mono'>
+            {/* <Location /> */}
             <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>View Order</h1>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem]'>View Order</h1>
               <div className='grid grid-cols-2 gap-3'>
                 {
                   (api?.orderData?.length >= 1)
@@ -125,14 +125,16 @@ export function Orders() {
                               </span>
                             </li>
                             <li className='font-bold capitalize flex gap-3'>
-                              <button className='bg-[red] text-[white] py-2 px-3 font-medium rounded-lg'>Delete</button>
+                              <button className='bg-[red] text-[black] py-2 px-3 font-medium rounded-lg'>Delete</button>
                             </li>
                           </ul>
                         </div>
                       )
                     })
                     :
-                    ""
+                    <article className='text-[white] text-[20px]'>
+                      ! No Orders Yet !
+                    </article>
                 }
               </div>
             </div>

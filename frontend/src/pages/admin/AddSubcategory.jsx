@@ -3,7 +3,7 @@ import Header from '../../common/admin/Header'
 import Sidebar from '../../common/admin/Sidebar'
 import Location from '../../common/admin/Location'
 import { myntraContext } from '../../Context/MainContext'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import adminBaseUrl from '../../common/admin/AdminBaseUrl'
 import 'react-notifications/lib/notifications.css';
@@ -118,20 +118,20 @@ export function AddSubcategory() {
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
-            <Location />
-            <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>Add Sub Category</h1>
+            {/* <Location /> */}
+            <div className='p-4 font-mono'>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem] '>Add Sub Category</h1>
               <form className='w-8/12' onSubmit={addSubCategory}>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Sub Category Name <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="text" className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.subCategoryName} name='subCategoryName' onChange={changeValue} />
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Name <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                    <input type="text" className='w-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.subCategoryName} name='subCategoryName' onChange={changeValue} />
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Category Id <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <select className='w-full bg-[white] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryId} name='categoryId' onChange={changeValue}>
+                  <label className='block text-[18px] font-medium mb-1 '>Category Id <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                    <select className='w-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px]' value={formData?.categoryId} name='categoryId' onChange={changeValue}>
                       <option value={""}>Select Category Id (Category Name)</option>
                       {
                         (categoryData?.length >= 1)
@@ -150,19 +150,19 @@ export function AddSubcategory() {
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Sub Category Description <span className='text-[red]'>*</span></label>
-                  <div className='w-full h-[120px] bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <textarea className='w-full h-full bg-[white] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.subCategoryDescription} name='subCategoryDescription' onChange={changeValue}></textarea>
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Description <span className='text-[red]'>*</span></label>
+                  <div className='w-full h-[120px]  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                    <textarea className='w-full h-full border border-1 border-[black] rounded-md p-1 outline-offset-[-999px] resize-none' value={formData?.subCategoryDescription} name='subCategoryDescription' onChange={changeValue}></textarea>
                   </div>
                 </div>
                 <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Sub Category Image <span className='text-[red]'>*</span></label>
-                  <div className='w-full bg-[black] bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
-                    <input type="file" className='file_upload w-full bg-[white] rounded-md p-1' name='subCategoryImage' />
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Image <span className='text-[red]'>*</span></label>
+                  <div className='w-full  bg-opacity-50 p-[2px_6px_6px_2px] rounded-lg'>
+                    <input type="file" className='file_upload w-full border border-1 border-[black] rounded-md p-[7px]' name='subCategoryImage' />
                   </div>
                 </div>
-                <div className='mb-6'>
-                  <label className='block text-[18px] font-medium mb-1'>Sub Category Status <span className='text-[red]'>*</span></label>
+                <div className='mb-6 '>
+                  <label className='block text-[18px] font-medium mb-1 '>Sub Category Status <span className='text-[red]'>*</span></label>
                   <div className='text-[18px]'>
                     <input type="radio" name='status' value={1} checked={formData.status == 1 ? true : false} onChange={changeValue} className='me-1' />Active<br />
                     <input type="radio" name='status' value={0} checked={formData.status == 0 ? true : false} onChange={changeValue} className='me-1' />De-Active

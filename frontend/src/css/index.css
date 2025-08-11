@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+body{
+    /* background-color: #2f3036; */
+}
 
+=======
+>>>>>>> 13a899a4a3d66eb3573ff23826825a30429af0fb
 .categories_inner:hover{
     transition: 0.8s;
     --tw-border-opacity: 1;
@@ -72,9 +78,11 @@
     appearance: none;
 }
 
+
+
 /* Admin login page */
 .background_admin{
-    background: linear-gradient(315deg, #f51cb3 0%, #ff912f 33%, #f25512 66%,#f51cb3 100%);
+    background:linear-gradient( #000a41,skyblue);
 }
 .sideBarOpenClose>:first-child{
     right: 0px;
@@ -103,3 +111,15 @@
     transform: translateY(-50%);
 }
 /* Admin login page */
+
+
+.sidebar_ul_li>li{
+    padding: 10px 5px;
+    transition: 0.5s;
+}
+
+.sidebar_ul_li>li:hover{
+
+    background-color: white;
+    color: black;
+} 

@@ -44,9 +44,9 @@ export function ViewSubCategory() {
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
-            <Location />
-            <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>View Sub Category</h1>
+            {/* <Location /> */}
+            <div className='p-4 font-mono'>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem]'>View Sub Category</h1>
               <table className='w-full table border'>
                 <thead>
                   <tr>
@@ -87,7 +87,7 @@ export function ViewSubCategory() {
                       })
                       :
                       <tr>
-                        <td className='border p-2 text-center'>! No Data Found !</td>
+                        <td className='border p-2 text-center' colSpan={6}>! No Data Found !</td>
                       </tr>
                   }
                 </tbody>

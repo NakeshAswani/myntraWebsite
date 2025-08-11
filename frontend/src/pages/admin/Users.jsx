@@ -24,9 +24,9 @@ export function Users() {
         <div className={`grid ${(sideBar) ? "grid-cols-[200px_auto]" : "grid-cols-[100px_auto]"} pt-[84px]`}>
           <Sidebar />
           <div className='w-full'>
-            <Location />
-            <div className='p-4'>
-              <h1 className='w-max text-4xl font-bold mb-6 bgClipColor leading-[2.8rem]'>View Users</h1>
+            {/* <Location /> */}
+            <div className='p-4 font-mono'>
+              <h1 className='w-max text-4xl font-bold mb-6  leading-[2.8rem]'>View Users</h1>
               <div className='grid grid-cols-2 gap-3 items-start'>
                 {
                   (userData?.length >= 1)
@@ -96,7 +96,9 @@ export function Users() {
                       )
                     })
                     :
-                    ""
+                    <article className='text-[white] text-[20px]'>
+                      ! No Users Yet !
+                    </article>
                 }
               </div>
             </div>
